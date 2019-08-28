@@ -23,7 +23,63 @@ Page({
     autoplay: false,
     interval: 5000,
     duration: 1000,
-    swiperCurrent: 0
+    swiperCurrent: 0,
+    plan: 0,
+    planList: ['方案一', '方案二', '方案三'],
+    navigationList: [{
+      src: '/images/index/logo_c_1.png',
+      txt: '查找诊所',
+      url: '',
+      width: '59rpx'
+    }, {
+      src: '/images/index/logo_c_2.png',
+      txt: '齿爱一生',
+      url: '',
+      width: '47rpx'
+    }, {
+      src: '/images/index/logo_c_3.png',
+      txt: '会员专享',
+      url: '',
+      width: '56rpx'
+    }, {
+      src: '/images/index/logo_c_4.png',
+      txt: '客服牙牙',
+      url: '',
+      width: '51rpx'
+    }],
+    lockList: [{
+      src: '/images/index/lock_1.png',
+      url: '',
+      txt: '即可解锁',
+      color: '#008ad3'
+    }, {
+      src: '/images/index/lock_2.png',
+      url: '',
+      txt: '每日打卡',
+      color: '#719292'
+    }, {
+      src: '/images/index/lock_3.png',
+      url: '',
+      txt: '即可解锁',
+      color: '#4da35f'
+    }],
+    cardList: [{
+      src: '/images/index/card_1.png',
+      url: '',
+      txt: '亲情卡',
+    }, {
+      src: '/images/index/card_2.png',
+      url: '',
+      txt: '爱情卡',
+    }, {
+      src: '/images/index/card_3.png',
+      url: '',
+      txt: '友情卡',
+    }, {
+      src: '/images/index/card_4.png',
+      url: '',
+      txt: '生日卡',
+    }]
   }, PageData), //页面的初始数据
   async onLoad(option) {
     $page = this;
@@ -63,6 +119,12 @@ Page({
     console.log(e.currentTarget.id)
     that.setData({
       swiperCurrent: e.currentTarget.id
+    })
+  },
+  bindPickerChange(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      plan: e.detail.value
     })
   }
 }) //end page

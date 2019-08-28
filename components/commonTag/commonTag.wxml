@@ -1,0 +1,20 @@
+<view class="common-tag">
+  <view class="main-box">
+    <view>
+      <image style="width: 40rpx;height: 40rpx;margin-bottom: 6rpx;" src="/images/index/home.png"></image>
+      <text>首页</text>
+    </view>
+    <view class="tag-center">
+      <image src="/images/index/myCard.png" mode="widthFix"></image>
+      <view class="tag-center-card">
+        <image src="/images/index/myCard_logo.png" mode="widthFix"></image>
+      </view>
+      <text class="tag-center-text">我的卡片</text>
+    </view>
+    <view>
+      <image style="width: 40rpx;height: 40rpx;margin-bottom: 6rpx;" src="/images/index/user.png"></image>
+      <text>我的爱齿怡</text>
+    </view>
+  </view>
+  <image class="tag-shadow" src="/images/index/tag_shadow.png" mode="widthFix"></image>
+</view>

@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "commonTop": "/components/commonTop/commonTop"
+    "commonTag": "/components/commonTag/commonTag"
   },
   "navigationStyle": "custom"
 }

@@ -1,0 +1,60 @@
+.common-tag {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 220rpx;
+}
+
+.common-tag .tag-shadow {
+  width: 100%;
+  top: 80rpx;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.common-tag .main-box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.common-tag .main-box > view {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-size: 24rpx;
+  align-items: center;
+}
+
+.common-tag .main-box > view:first-child,
+.common-tag .main-box > view:last-child {
+  padding-top: 118rpx;
+}
+
+.common-tag .main-box > .tag-center {
+  padding-top: 10rpx;
+  position: relative;
+}
+.common-tag .main-box > .tag-center > image {
+  width: 160rpx;
+}
+.common-tag .main-box > .tag-center .tag-center-card {
+  width: 78rpx;
+  height: 50rpx;
+  border: 2rpx solid #fff;
+  border-radius: 6rpx;
+  position: absolute;
+  top: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+.common-tag .main-box > .tag-center .tag-center-card image {
+  width: 30rpx;
+}
+.common-tag .main-box > .tag-center .tag-center-text {
+  position: absolute;
+  font-size: 12rpx;
+  color: #fff;
+  top: 120rpx;
+}

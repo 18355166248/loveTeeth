@@ -1,5 +1,5 @@
 <!-- 顶级view的class name默认article -->
-<view class="article" catchtouchmove="true">
+<scroll-view scroll-y id="home">
   <!-- 轮播图 -->
   <view class="swiper-container">
     <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperChange" circular='true'>
@@ -19,16 +19,65 @@
 
   <!-- 表单 -->
   <view class="form">
-    <view>
-      <text>开启您的年度口腔体检</text>
-      <view class="card-view common-view">
+    <view class="form-view" style="margin-bottom: 25rpx;">
+      <text class="form-title">开启您的年度口腔体检</text>
+      <view class="common-view">
         <view class="left-c">
-          <view class="iconfont icon_edit"></view>
-          <input placeholder="输入卡号" />
+          <image src="/images/index/edit_icon.png"></image>
+          <input placeholder="输入卡号" value="{{form.card}}" />
         </view>
         <view class="right-c">激 活</view>
       </view>
     </view>
+    <view class="form-view">
+      <text class="form-title">查找您的专属省钱方案</text>
+      <view class="common-view">
+        <view class="plan-left-c">
+          <image class="search_icon" src="/images/index/search_icon.png"></image>
+          <!-- <view >{{ plan }}</view> -->
+          <picker class="text" bindchange="bindPickerChange" value="{{plan}}" range="{{planList}}">
+            <view class="picker">
+              {{planList[plan]}}
+            </view>
+          </picker>
+          <view class="iconfont icon_down_arrow"></view>
+        </view>
+        <view class="plan-right-c">查 找</view>
+      </view>
+    </view>
   </view>
-</view>
+
+  <!-- 导航 -->
+  <view class="navigation-list">
+    <view class="navigation-item" wx:for="{{navigationList}}" wx:key="{{index}}">
+      <view class="navigation-image">
+        <image src="{{item.src}}" style="width: {{item.width}}" mode="widthFix"></image>
+      </view>
+      <text>{{item.txt}}</text>
+    </view>
+  </view>
+
+  <!-- 解锁区域 -->
+  <view class="lock">
+    <view class="lock-item" wx:for="{{lockList}}" wx:key="{{index}}">
+      <image src="{{item.src}}"></image>
+      <view class="lock-bg" style="color: {{item.color}}">{{ item.txt }}</view>
+    </view>
+  </view>
+
+  <!-- 卡 -->
+  <view class="mind-title">
+    <image src="/images/index/mind.png" mode="widthFix"></image>
+  </view>
+  <view class="card-box">
+    <view class="card-item" wx:for="{{cardList}}" wx:key="{{index}}">
+      <image src="{{item.src}}" mode="widthFix"></image>
+      <view class="card-bg" style="color: {{item.color}}">{{ item.txt }}</view>
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 公共tag -->
+<commonTag></commonTag>
+<!-- 公共 -->
 <!----article end----->
