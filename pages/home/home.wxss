@@ -47,3 +47,82 @@
   .cssMedia {
   }
 }
+
+.swiper {
+  width: 750rpx;
+  height: 652rpx;
+}
+
+.banner-image {
+  width: 100%;
+  height: 562rpx;
+}
+
+/* dot定位位置 */
+
+.swiper-container .dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40rpx;
+  display: flex;
+  justify-content: center;
+}
+
+/* 未经过前dot */
+
+.swiper-container .dots .dot {
+  margin: 0 8rpx;
+  width: 14rpx;
+  height: 14rpx;
+  background-color: transparent;
+  border-radius: 8rpx;
+  border: 0.1rpx solid #31c27c;
+  transition: all 0.6s ease-in-out;
+}
+
+/* 经过后dot */
+
+.swiper-container .dots .dot.active {
+  width: 24rpx;
+  background: #31c27c;
+}
+
+/* 表单s */
+
+/* #1ea6d6  #75e1b6 */
+
+.form {
+  width: 750rpx;
+  padding: 0 54rpx 34rpx 54rpx;
+}
+.form .common-view {
+  height: 53rpx;
+}
+.form .card-view { 
+  display: flex;
+}
+
+.form .card-view .left-c {
+  position: relative;
+  padding-left: 67rpx;
+}
+.form .card-view .icon_search {
+  width: 21rpx;
+  position: absolute;
+  top: 10rpx;
+  left: 30rpx;
+  color: #9e9f9f;
+}
+.form .card-view .right-c {
+  width: 149rpx;
+  background: linear-gradient(to left, #1ea6d6, #75e1b6);
+  color: #fff;
+  border-top-right-radius: 8rpx;
+  border-bottom-right-radius: 8rpx;
+  text-align: center;
+  font-size: 25rpx;
+  line-height: 53rpx;
+}
+
+/* 表单e */

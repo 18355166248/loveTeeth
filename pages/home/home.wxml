@@ -1,17 +1,34 @@
-
 <!-- 顶级view的class name默认article -->
 <view class="article" catchtouchmove="true">
-  <!----section begin----->
-  <!-- commonTop s-->
-  <commonTop has-userinfo="{{hasUserInfo}}" avatar-url="{{userInfo.avatarUrl}}" nick-name="{{userInfo.nickName}}"></commonTop>
-  <!-- commonTop e-->
-  <view class='content'>
-    我是内页
+  <!-- 轮播图 -->
+  <view class="swiper-container">
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperChange" circular='true'>
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item class="swiper-item">
+          <image bindchange='imageChange' src="{{item}}" id="{{index}}" class="banner-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 自定义指示点dot -->
+    <view class="dots">
+      <block wx:for="{{swiperImgUrls}}" wx:key="index">
+        <view class='dot {{swiperCurrent == index ? "active" : ""}}'></view>
+      </block>
+    </view>
   </view>
-  <!----section end----->
-  <!----bgm button----->
-  <view class='bgmBtn {{bgmPlay}}' catchtap='bgmClick' wx:if='{{bgmBtn}}'>
-    <image src='/images/common/bgm_on.png'></image>
+
+  <!-- 表单 -->
+  <view class="form">
+    <view>
+      <text>开启您的年度口腔体检</text>
+      <view class="card-view common-view">
+        <view class="left-c">
+          <view class="iconfont icon_edit"></view>
+          <input placeholder="输入卡号" />
+        </view>
+        <view class="right-c">激 活</view>
+      </view>
+    </view>
   </view>
 </view>
 <!----article end----->
