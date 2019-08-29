@@ -1,1 +1,73 @@
-/* pages/personal/personal.wxss */
+.personal {
+  width: 100%;
+}
+.personal .head {
+  width: 100%;
+  position: relative;
+}
+.personal .head image.head-bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.personal .head .avator {
+  padding-top: 160rpx;
+  text-align: center;
+}
+.personal .head .avator > view {
+  display: inline-block;
+  width: 172rpx;
+  height: 172rpx;
+  border: 4rpx solid #fff;
+  border-radius: 86rpx;
+  overflow: hidden;
+}
+
+.personal .head .avator > view image {
+  width: 172rpx;
+  height: 172rpx;
+}
+
+.personal .head .describ {
+  color: #fff;
+}
+
+.personal .head .describ > view {
+  text-align: center;
+}
+
+.personal .head .describ > view:first-child {
+  font-size: 32rpx;
+}
+.personal .head .describ > view:nth-child(2) {
+  font-size: 24rpx;
+}
+.personal .head .describ > view:last-child {
+  font-size: 12rpx;
+}
+
+.personal .head .describ > view .progress {
+  display: inline-block;
+  width: 150rpx;
+  height: 14rpx;
+  border-radius: 7rpx;
+  background-color: #fff;
+  position: relative;
+}
+
+.personal .head .describ > view .progress::before {
+  content: '';
+  position: absolute;
+  height: 14rpx;
+  width: 0;
+  left: 0;
+  top: 0;
+  border-radius: 7rpx;
+  background-image: linear-gradient(to right, #39a032, #0294c8);
+  transition: width 0.6s ease-in-out;
+}
+
+.personal .head .describ > view .progress.active::before {
+  width: 60%;
+}
