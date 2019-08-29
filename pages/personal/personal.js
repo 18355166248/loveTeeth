@@ -1,28 +1,18 @@
-// pages/storeInfo/storeInfo.js
-const app = getApp();
-const beats = app.beats;
-const API = app.API;
-const icom = require('../../common/js/base/com.js');
-import regeneratorRuntime from '../../common/js/plugs/regeneratorRuntime';
-import promisify from '../../common/js/plugs/promisify.js';
-import config from '../../config.js';
+// pages/personal/personal.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo: {},
-    hasUserInfo: false,
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  async onLoad(options) {
-    console.log(options)
-    //获取用户头像和昵称
-    await beats.getUserInfo()
+  onLoad: function (options) {
+
   },
 
   /**

@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "van-tree-select": "/path/dist/tree-select/index"
-  },
-  "navigationBarTitleText": "选择地区"
-}

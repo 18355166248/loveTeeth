@@ -51,13 +51,14 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "home",
-					"pathName": "pages/home/home",
-					"query": ""
+					"id": 0,
+					"name": "personal",
+					"pathName": "pages/personal/personal",
+					"query": "",
+					"scene": null
 				},
 				{
 					"id": 1,
@@ -84,6 +85,7 @@
 					"id": -1,
 					"name": "cityData",
 					"pathName": "pages/selectCity/selectCity",
+					"query": "",
 					"scene": null
 				}
 			]

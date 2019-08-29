@@ -1,0 +1,6 @@
+<view class="personal">
+  <!-- 头部 -->
+  <view class="head">
+    <image  src="/images/personal/person_bg_top.png" mode="widthFix"></image>
+  </view>
+</view>

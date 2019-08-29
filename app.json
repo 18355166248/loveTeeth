@@ -1,11 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/home/home",
-    "pages/testimg/testimg",
-    "pages/store/store",
-    "pages/selectCity/selectCity",
-    "pages/storeInfo/storeInfo"
+    "pages/personal/personal"
   ],
   "window": {
     "navigationStyle": "default",
