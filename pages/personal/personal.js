@@ -7,18 +7,65 @@ Page({
     cardNo: 888,
     cur: 1800,
     max: 99999,
-    active: ''
+    active: '',
+    personalList: [{
+      src: '/images/personal/card_bg_1.png',
+      url: '',
+      txt: '点击查看',
+      color: '#2e88c1'
+    }, {
+      src: '/images/personal/card_bg_2.png',
+      url: '',
+      txt: '点击查看',
+      color: '#4da35f'
+    }, {
+      src: '/images/personal/card_bg_3.png',
+      url: '',
+      txt: '点击查看',
+      color: '#45c7e1'
+    }],
+    menuList: [{
+      src: '/images/personal/menu1.png',
+      url: '',
+      txt: '口腔保险'
+    }, {
+      src: '/images/personal/menu2.png',
+      url: '',
+      txt: '开票中心'
+    }, {
+      src: '/images/personal/menu3.png',
+      url: '',
+      txt: '我的评价'
+    }, {
+      src: '/images/personal/menu4.png',
+      url: '',
+      txt: '客服牙牙'
+    }, {
+      src: '/images/personal/menu5.png',
+      url: '',
+      txt: '购物车'
+    }, {
+      src: '/images/personal/menu6.png',
+      url: '',
+      txt: '领券中心'
+    }, {
+      src: '/images/personal/menu7.png',
+      url: '',
+      txt: '收藏栏'
+    }, {
+      src: '/images/personal/menu8.png',
+      url: '',
+      txt: '足迹'
+    }]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    setTimeout(() => {
-      this.setData({
-        active: 'active'
-      })
-    }, 1000)
+    this.setData({
+      active: 'active'
+    })
   },
 
   /**

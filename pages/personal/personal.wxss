@@ -1,20 +1,27 @@
 .personal {
   width: 100%;
+  padding-bottom: 220rpx;
 }
+
+/* 头部 s */
+
 .personal .head {
   width: 100%;
   position: relative;
 }
+
 .personal .head image.head-bg {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
+
 .personal .head .avator {
   padding-top: 160rpx;
   text-align: center;
 }
+
 .personal .head .avator > view {
   display: inline-block;
   width: 172rpx;
@@ -40,11 +47,13 @@
 .personal .head .describ > view:first-child {
   font-size: 32rpx;
 }
+
 .personal .head .describ > view:nth-child(2) {
   font-size: 24rpx;
 }
+
 .personal .head .describ > view:last-child {
-  font-size: 12rpx;
+  font-size: 14rpx;
 }
 
 .personal .head .describ > view .progress {
@@ -71,3 +80,111 @@
 .personal .head .describ > view .progress.active::before {
   width: 60%;
 }
+
+/* 头部 e */
+
+.personal .card {
+  margin: 90rpx 0 50rpx 0;
+  text-align: center;
+}
+
+.personal .card > image {
+  width: 503rpx;
+}
+
+.personal .card .card-list {
+  display: flex;
+  padding: 0 120rpx;
+  font-size: 22rpx;
+  color: #727171;
+  justify-content: space-between;
+  margin-top: 16rpx;
+}
+
+.personal .card .card-list .key image, .personal .card .card-list .friend image {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+.personal .card .card-list .key {
+  padding-left: 40rpx;
+}
+
+.personal .card .card-list .friend {
+  padding-right: 40rpx;
+}
+
+.personal .card .card-list .line {
+  width: 2rpx;
+  height: 40rpx;
+  background-color: #73ccdd;
+}
+
+.personal .card .card-list text {
+  vertical-align: middle;
+  margin-left: 8rpx;
+}
+
+/* 会员专享 我的订单 每日任务 s */
+
+.prosonal-list .prosonal-list-item {
+  width: 750rpx;
+  height: 180rpx;
+  margin-bottom: 12rpx;
+  position: relative;
+}
+
+.prosonal-list .prosonal-list-item image {
+  width: 100%;
+  height: 100%;
+}
+
+.prosonal-list .prosonal-list-item .prosonal-list-bg {
+  position: absolute;
+  width: 109rpx;
+  height: 37rpx;
+  line-height: 37rpx;
+  left: 50%;
+  bottom: 7rpx;
+  margin-left: -54.5rpx;
+  font-size: 16rpx;
+  text-align: center;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG0AAAAlCAYAAABI82dXAAAEHElEQVRoge2bX0hkdRTHv2dW8uo2g6bRjKUI0/rnIXIUXIyNiKQeqocKE1pY6MVY+k8P4Uub9bZRlMxIIj4EgoEZQduDGbIKPvQwSuASSlAoO9O0+Y/BcZp77+/ETxzS/TnjOM7Mzja/D1xmOL9771zOl3Pu75zfb4iZkUfut227m5lbATzqcDgeAlANgPL5owUkIYS4ZVnW76Zp3jBNM9jf3399eHjYzNcjEBHyIRrZtn0RwCsOh+NxIrpXOeN/jG3b4Vgsdm1jY+PrxsbGWWa2c+rcXIsmhLhMRO8S0TllsATZ2dm5HolEPvF6vT8ys5ULD0jRIEXLwdEthAiy5kg2NzcnBgcH5avBcVpf7wmXg0j7EMAVxao5RCKRCC8tLb3R0dFxjZkT2Xrn1OmRmb8hopeUAU1KlpeX329pafEzcyzVOek4lWjMPEVETysDmmNZWVn5qLm5+Soz72QjmkOxZibY91qw7GlqavpgYWHhNSI6m81NshHtKhE9p1g1J8Ln8306Njb2JBEZJ732pOnxKQA/KVZNVsTj8ZDX6+0KhUJhZs6oID9pepTT1THFqskawzDq5ubmPgbgor0CLEMhFEtqrhCRO+WoJiu8Xu+lgYGBNgAVmV6faXr0AFgDcEYZ0Zya9fX1n2tra18A8Ndxba+M0yMzD2nB8kdNTc35ycnJZwFkNJvMJNIeAzCvWDU5ZXd392ZlZaX0ddpJSUaRxsxfKkZNzqmoqHgwGAy+DsB53KQkrWi2bb9KRI8oA5q80NbW9nZvb28jgPJ090+XHs8y8yoR3aeMaPLG2tratw0NDZcB/M3MQhEsXXoUQgxowQpPfX39i4FA4Hy6EiBVpHkB/KZYNQVha2trsbq6+nkAkdsXT1NGGjP7FaOmYFRVVfmmp6d7UpUAR0VaN4Bp5UxNQYnH4xG32921vb198+Ci6ZGRtl9Ia+4whmE8MD8//95RJcAh0YQQb+pNOcVDa2trX19f38O3lwAH06Pc6hbe/9QUCeFweKquru5SsgQ4lB6FEJ9pwYoPj8fzzMjIyAUAlcmHS0ZaC4BfS91BxUo0Gl12uVxygvgnAEtGWhUzj5S6Y4oZp9PZPDs7ezGZCaVobxHRhVJ3TLHT2dn5TiAQ8AG4R24h6C51h9wNGIbhbm9vf0K2t2SkpV0p1RQPiUTizF6kmaapux93AbFYLDQxMRGUT+pYXFz0R6PR70rdKcXO+Pj4F36/Xzbx/9mb8hORc3V19XOPx/NyWVmZrtWKiGg0+sfU1NRXPT09PwAIyc0/SdHku801NDTU5Xa7z1mWVS6Esv6mKSCy32hZljk6OvrLzMzMLQCbcuOW3E5ysBEpvxv7lXd5llvGNblFdj7kelpcvtYAmEjx32c6cGjuPDLl/bd+BuBfcz0MoSZ6FisAAAAASUVORK5CYII=') no-repeat 0 0;
+  background-size: 100%;
+}
+
+/* 会员专享 我的订单 每日任务 e */
+
+/* 菜单 s */
+
+.menu-list {
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 50rpx;
+}
+
+.menu-list .menu-list-item {
+  width: 25%;
+  text-align: center;
+  margin-bottom: 47rpx;
+}
+
+.menu-list .menu-list-item .menu-icon {
+  width: 100%;
+  height: 55rpx;
+  text-align: center;
+}
+
+.menu-list .menu-list-item .menu-icon image {
+  width: 55rpx;
+}
+
+.menu-list .menu-list-item .menu-txt {
+  font-size: 24rpx;
+  color: #727171;
+}
+
+/* 菜单 e */
