@@ -1,1 +1,102 @@
 /* pages/myCard/myCard.wxss */
+.myCard {width: 100%;padding-bottom: 220rpx;}
+.header{margin-bottom: 55rpx;}
+
+.head-bg{width: 100%;padding: 20rpx 0 50rpx;}
+
+.userCard{width: 600rpx;margin: 0 auto;}
+.userCard .userCard-bg{margin: 0 auto;width: 100%;height: 100%;}
+.userCard .userCard-num{position: absolute;left: 50%;transform: translateX(-50%); bottom: 90rpx;width: 100%;text-align: center;}
+.userCard .userCard-num text{display: inline-block;font-size: 45rpx;color: #ffffff;text-shadow: 0px 2px 0px #bdbdbd, 0px 2px 0px #bdbdbd, 0px 3px 0px #bdbdbd, 0px 2px 0px #bdbdbd, 0px 2px 0px #bdbdbd, 0px 3px 0px #bdbdbd, 0px 3px 0px #bdbdbd, 0px 4px 3px #bdbdbd; }
+.userCard .userCard-num .numFront{margin-right: 35rpx;text-shadow: 0px 2px 0px #bdbdbd, 0px 2px 0px #bdbdbd, 0px 3px 0px #bdbdbd, 0px 2px 0px #bdbdbd, 0px 2px 0px #bdbdbd, 0px 3px 0px #bdbdbd, 0px 3px 0px #bdbdbd, 0px 4px 3px #bdbdbd;}
+.userCard .userCard-label{font-size: 32rpx;position: absolute;left: 52rpx;bottom: 33rpx;color: #fff;text-shadow: 6px 2px 2px #bdbdbd;}
+
+/* .userCard.active 激活样式 */
+.userCard.active .userCard-num text,.userCard.active .userCard-numactive .numFront,.userCard.active .userCard-label{text-shadow: 1px 1px 1px #bdbdbd;}
+
+/* userCard-bg-border */
+.userCard .userCard-bg-border{width: 100%;height: 51rpx;position: absolute;bottom: -16rpx;left: 0;z-index: -1;}
+
+/* cardBody */
+.cardBody{width: 100%;border-top: 8rpx solid #e5e5e5;padding: 60rpx 0 0;}
+.cardBody .listBox>.item{width: 660rpx;height: 278rpx;position: relative;margin: 0 auto 30rpx;}
+.cardBody .listBox>.item>.item-bg{width: 100%;height: 100%;position: absolute;top: 8rpx;left: -8rpx;}
+.cardBody .listBox>.item .content{width: 100%;height: 100%;display: flex;justify-content: space-around;align-items: center;}
+.cardBody .listBox>.item .content .left{text-align: center;color: #fff;width: calc(100% - 115rpx);overflow: hidden;}
+.cardBody .listBox>.item .content .left .title1{font-size: 32rpx;font-weight: bold;}
+.cardBody .listBox>.item .content .left .title2{font-size: 38rpx;font-weight: bold;padding: 10rpx 0;}
+.cardBody .listBox>.item .content .left .title2>text{font-size: 40rpx;font-weight: bold;font-style: italic;}
+.cardBody .listBox>.item .iconBox{display: flex;justify-content: space-around;align-items: center;width: 80%;margin: 0 auto;}
+.cardBody .listBox>.item .iconBox>view{display: flex;justify-content: space-around;align-items: center;margin-bottom: 15rpx;}
+.cardBody .listBox>.item .iconBox  text{font-size: 18rpx;margin-left: 10rpx;}
+.cardBody .listBox>.item .iconBox .icon-loc>image{width: 22rpx;height: 28rpx;}
+.cardBody .listBox>.item .iconBox .icon-date>image{width: 28rpx;height: 25rpx;}
+.cardBody .listBox>.item .cardNum{font-size: 30rpx;text-align: left;padding-left: 30rpx;}
+.cardBody .listBox>.item .btn{width: 140rpx;text-align: center;left: -8rpx;}
+.cardBody .listBox>.item .btn>image{width: 105rpx;height: 96rpx;}
+
+/* 按钮类型2 */
+.cardBody .listBox>.item2 .content .left .title1{font-size: 18rpx;}
+.cardBody .listBox>.item2 .content .left .title2{padding: 5rpx 0;}
+.cardBody .listBox>.item2 .content .left .icon_star{width: 49rpx;height: 42rpx;}
+
+/* 按钮类型3 */
+.cardBody .listBox>.item .content .left .titleInfo{margin-bottom: 30rpx;}
+.cardBody .listBox>.item .content .left .titleInfo>.txt{width: auto; padding: 5rpx 15rpx;background-color: #fff;border-radius: 20rpx;text-align: center;font-size: 22rpx;color: #92aab7;}
+.cardBody .listBox>.item3 .content .left .title2{padding-bottom: 8rpx;}
+
+
+/* 按钮类型4 */
+.cardBody .listBox>.item4 .content .left .title2{padding: 10rpx 0 48rpx;}
+
+
+
+
+
+
+
+
+
+/**
+   css media 适配
+*/
+
+/** iphone系列 */
+
+@media screen and (width:320px), screen and (width:375px), screen and (width:414px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓系列 */
+
+@media screen and (width:360px), screen and (width:393px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓 15:9 */
+
+@media screen and (width:360px) and (max-height:540px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓 18:9 */
+
+@media screen and (width:360px) and (min-height:600px),
+       screen and (width:412px) and (min-height:680px),
+       screen and (width:393px) {
+  .cssMedia {
+  }
+}
+
+/** iphoneX */
+
+@media screen and (width:375px) and (min-height:724px),
+       screen and (width:414px) and (min-height:808px) {
+  .cssMedia {
+  }
+
+  .head-bg{padding-top: 60rpx;}
+}
