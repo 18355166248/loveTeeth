@@ -7,16 +7,26 @@ import promisify from '../../common/js/plugs/promisify.js';
 import config from '../../config.js';
 //-------------------------------------------------------初始化-------------------------------------------------------
 let $page, $query, SessionKey, OpenID;
+/**
+ * pageId:1 首页 2 我的爱齿怡 3 我的卡片
+ */
 let PageData = {
-  appData: app.data //拿到全局的数据
+  appData: app.data, //拿到全局的数据
 };
 
 Page({
   data: Object.assign({
-    imgUrls: [
-      '/images/index/banner1.png',
-      '/images/index/banner2.png',
-      '/images/index/banner3.png'
+    imgUrls: [{
+        img: '/images/index/banner1.png',
+        url: 'https://mp.weixin.qq.com' //外链 测试
+      },
+      {
+        img: '/images/index/banner2.png',
+        url: 'https://mp.weixin.qq.com'
+      }, {
+        img: '/images/index/banner3.png',
+        url: 'https://mp.weixin.qq.com'
+      }
     ],
     swiperImgUrls: [1, 2, 3],
     indicatorDots: false,
@@ -24,6 +34,9 @@ Page({
     interval: 5000,
     duration: 1000,
     swiperCurrent: 0,
+    form:{
+      card:'' //卡号
+    },
     plan: 0,
     planList: ['方案一', '方案二', '方案三'],
     navigationList: [{
@@ -84,6 +97,7 @@ Page({
   async onLoad(option) {
     $page = this;
     $query = option;
+    // await beats.signIn()
   },
   onReady: function() {}, //监听页面初次渲染完成
   onShow: function() {
@@ -126,6 +140,37 @@ Page({
     this.setData({
       plan: e.detail.value
     })
+  },
+  //banner 跳外链
+  bannerClick(e){
+    console.log(e.currentTarget.dataset.url)
+    let url = e.currentTarget.dataset.url
+    wx.navigateTo({
+      url: `/pages/banner_link/banner_link?url=${url}`,
+    })
+  },
+  //卡号
+  bindKeyInput: function (e) {
+    this.setData({
+      'form.card': e.detail.value
+    })
+  },
+  activateClick(){
+    console.log('激活卡号',this.data.form.card)
+    if (this.data.form.card === ''){
+      icom.alert('请您输入卡号')
+      return
+    }
+    //---------------------------ajax 提交数据
+  },
+  //查找方案
+  planClick(){
+    console.log('查找方案', this.data.plan+1)
+    //---------------------------ajax 跳转链接
+  },
+  //其他页面跳转
+  navigatClick(){
+    icom.alert('敬请期待')
   }
 }) //end page
 

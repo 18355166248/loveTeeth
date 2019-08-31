@@ -24,7 +24,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.7.4",
+	"libVersion": "2.8.1",
 	"appid": "wxb5ad95a20af4cbc5",
 	"projectname": "loveTeeth",
 	"debugOptions": {
@@ -51,11 +51,11 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 0,
 			"list": [
 				{
 					"id": 0,
-					"name": "personal",
+					"name": "我的爱齿怡",
 					"pathName": "pages/personal/personal",
 					"query": "",
 					"scene": null
@@ -64,6 +64,7 @@
 					"id": -1,
 					"name": "我的卡片",
 					"pathName": "pages/myCard/myCard",
+					"query": "",
 					"scene": null
 				}
 			]

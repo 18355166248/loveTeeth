@@ -1,9 +1,26 @@
-// pages/personal/personal.js
+const app = getApp();
+const beats = app.beats;
+const API = app.API;
+const icom = require('../../common/js/base/com.js');
+import regeneratorRuntime from '../../common/js/plugs/regeneratorRuntime';
+import promisify from '../../common/js/plugs/promisify.js';
+import config from '../../config.js';
+//-------------------------------------------------------初始化-------------------------------------------------------
+let $page, $query, SessionKey, OpenID;
+/**
+ * pageId:1 首页 2 我的爱齿怡 3 我的卡片
+ */
+let PageData = {
+  appData: app.data, //拿到全局的数据
+};
+
 Page({
-  /**
-   * 页面的初始数据
-   */
-  data: {
+  data: Object.assign({
+    myCard:{
+      isActive:false,//是否激活
+      cardBg: ['/images/card/card_bg.png','/images/card/card_bg_active.png'],//背景
+      cardTips: ['激活“爱齿怡”','已激活'] //文字
+    },
     cardNo: 888,
     cur: 1800,
     max: 99999,
@@ -57,49 +74,20 @@ Page({
       url: '',
       txt: '足迹'
     }]
+  }, PageData), //页面的初始数据
+  async onLoad(option) {
+    $page = this;
+    $query = option;
   },
+  onReady: function() {}, //监听页面初次渲染完成
+  onShow: function() {}, //监听页面显示
+  onHide: function() {}, //监听页面隐藏
+  onUnload: function() {}, //监听页面卸载
+  onPullDownRefresh: function() {}, //页面相关事件处理函数--监听用户下拉动作
+  onReachBottom: function() {}, //页面上拉触底事件的处理函数
+  onShareAppMessage: function() { //用户点击右上角分享
+    return app.setShareData();
+  }
+}) //end page
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function(options) {
-    this.setData({
-      active: 'active'
-    })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {},
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {},
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {},
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {},
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {},
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {},
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {}
-})
+//-------------------------------------------------------业务逻辑-------------------------------------------------------

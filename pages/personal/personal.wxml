@@ -4,7 +4,8 @@
     <image class="head-bg" src="/images/personal/person_bg_top.png" mode="widthFix"></image>
     <view class="avator">
       <view>
-        <image src="/images/personal/avator.jpg"></image>
+        <!-- <image src="/images/personal/avator.jpg"></image> -->
+        <open-data type="userAvatarUrl"></open-data>
       </view>
     </view>
     <view class="describ">
@@ -21,14 +22,15 @@
 
   <!-- 卡片 -->
   <view class="card">
-    <image src="/images/personal/card.png" mode="widthFix"></image>
+    <image src="{{myCard.isActive ? myCard.cardBg[1] : myCard.cardBg[0]}}" mode="widthFix"></image>
     <view class="card-list">
       <view class="key">
         <image src="/images/personal/key.png"></image>
-        <text>激活“爱齿怡”</text>
+        <text>{{myCard.isActive ? myCard.cardTips[1] : myCard.cardTips[0]}}</text>
       </view>
       <view class="line"></view>
       <view class="friend">
+        <button open-type="share"></button>
         <image src="/images/personal/friend.png"></image>
         <text>邀请好友</text>
       </view>

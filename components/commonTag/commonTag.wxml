@@ -1,17 +1,17 @@
 <view class="common-tag">
   <view class="main-box">
-    <view>
+    <view catchtap="navigatorClick" id="1">
       <image style="width: 40rpx;height: 40rpx;margin-bottom: 6rpx;" src="/images/index/home.png"></image>
       <text>首页</text>
     </view>
-    <view class="tag-center">
+    <view class="tag-center" catchtap="navigatorClick" id="3">
       <image src="/images/index/myCard.png" mode="widthFix"></image>
       <view class="tag-center-card">
         <image src="/images/index/myCard_logo.png" mode="widthFix"></image>
       </view>
       <text class="tag-center-text">我的卡片</text>
     </view>
-    <view>
+    <view catchtap="navigatorClick" id="2">
       <image style="width: 40rpx;height: 40rpx;margin-bottom: 6rpx;" src="/images/index/user.png"></image>
       <text>我的爱齿怡</text>
     </view>

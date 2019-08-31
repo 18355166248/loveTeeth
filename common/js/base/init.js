@@ -13,30 +13,30 @@ class Inits {
    * 初始化 拿code
    */
   async signIn() {
-    // const login = promisify(wx.login);
-    // //code
-    // let {
-    //   code
-    // } = await login();
-    // this.code = code
-    // //发送给服务器
-    // await this.send()
-    // //获取用户头像和昵称
-    // await this.getUserInfo().then(res=>{}).catch(res=>{
-    //   console.log(res)
-    // });
+    const login = promisify(wx.login);
+    //code
+    let {
+      code
+    } = await login();
+    this.code = code
+    //发送给服务器
+    await this.send()
+    //获取用户头像和昵称
+    await this.getUserInfo().then(res=>{}).catch(res=>{
+      console.log(res)
+    });
 
     // await wx.cloud.init()
-    let userData = await API.callFunction('getOpenID')
-    icom.storage("OpenID", userData.userInfo.openId)
-    config.OpenID = userData.userInfo.openId
-    //请求门店
-    let cityData = await API.callFunction('getStore')
-    config.cityData = cityData.data
-    //头像信息
-    let {authSetting} = await promisify(wx.getSetting)()
-    this.authSetting = authSetting
-    if (this.authSetting['scope.userInfo']) await this.getUserInfo()
+    // let userData = await API.callFunction('getOpenID')
+    // icom.storage("OpenID", userData.userInfo.openId)
+    // config.OpenID = userData.userInfo.openId
+    // //请求门店
+    // let cityData = await API.callFunction('getStore')
+    // config.cityData = cityData.data
+    // //头像信息
+    // let {authSetting} = await promisify(wx.getSetting)()
+    // this.authSetting = authSetting
+    // if (this.authSetting['scope.userInfo']) await this.getUserInfo()
   }
   /**
    * 发送给服务器code去换 openid sessionKey啥的

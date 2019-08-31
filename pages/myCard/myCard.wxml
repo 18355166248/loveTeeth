@@ -2,104 +2,47 @@
   <!-- 头部 -->
   <view class="header">
     <image class="head-bg" src="/images/card/title.png" mode="widthFix"></image>
-    <view class="userCard active">
-      <image class="userCard-bg" src="/images/card/card_bg_active.png" mode="widthFix"></image>
+    <view class="userCard active{{myCard.isActive ? 'active' : ''}}">
+      <image class="userCard-bg" src="{{myCard.isActive ? myCard.cardBg[1] : myCard.cardBg[0]}}" mode="widthFix"></image>
       <image class="userCard-bg-border" src="/images/card/border.png"></image>
       <view class="userCard-num">
-        <text class="numFront">6188</text>
-        <text class="numEnd">789007669008</text>
+        <text class="numFront">{{myCard.cardNum[0]}}</text>
+        <text class="numEnd">{{myCard.cardNum[1]}}</text>
       </view>
-      <view class="userCard-label">口腔一号</view>
+      <view class="userCard-label">{{myCard.cardName}}</view>
     </view>
   </view>
   <view class="cardBody">
     <view class="listBox">
-      <view class="item item1">
-        <image class="item-bg" src="/images/card/cardtype1_bg.png"></image>
+      <view class="item item{{item.couponBtnType}}" wx:for="{{couponList}}" wx:key="index" catchtap="couponbtnClick" data-type="{{item.couponBtnType}}">
+        <image class="item-bg" src="{{item.couponbg}}"></image>
         <view class="content">
           <view class="left">
-            <view class="title1">爱齿怡全方位呵护年检套餐</view>
-            <view class="title2">价值
-              <text>760</text> 元</view>
-            <view class="iconBox">
-              <view class="icon-loc">
-                <image src="/images/card/cardtype2_loc.png" mode="widthFix"></image>
-                <text>全国瑞尔口腔连锁</text>
-              </view>
-              <view class="icon-date">
-                <image src="/images/card/cardtype4_date.png" mode="widthFix"></image>
-                <text>2018-8-8 ~ 2019-8-7</text>
-              </view>
-            </view>
-            <view class="cardNum">No.000000000000000000</view>
-          </view>
-          <view class="btn">
-            <image src="/images/card/cardtype1_btn.png" mode="widthFix"></image>
-          </view>
-        </view>
-      </view>
-      <view class="item item2">
-        <image class="item-bg" src="/images/card/cardtype2_bg.png"></image>
-        <view class="content">
-          <view class="left">
-            <view class="title1">爱齿怡全方位呵护年检套餐</view>
-            <view class="title2">瑞尔诊疗折扣券</view>
-            <image class="icon_star" src="/images/card/cardtype2_icon.png" mode="widthFix"></image>
-            <view class="iconBox">
-              <view class="icon-loc">
-                <image src="/images/card/cardtype2_loc.png" mode="widthFix"></image>
-                <text>全国瑞尔口腔连锁</text>
-              </view>
-              <view class="icon-date">
-                <image src="/images/card/cardtype4_date.png" mode="widthFix"></image>
-                <text>2018-8-8 ~ 2019-8-7</text>
-              </view>
-            </view>
-            <view class="cardNum">No.000000000000000000</view>
-          </view>
-          <view class="btn">
-            <image src="/images/card/cardtype2_btn.png" mode="widthFix"></image>
-          </view>
-        </view>
-      </view>
-      <view class="item item3">
-        <image class="item-bg" src="/images/card/cardtype3_bg.png"></image>
-        <view class="content">
-          <view class="left">
-            <view class="title2">瑞尔诊疗折扣券</view>
-            <view class="titleInfo">
-              <text class="txt">洁牙意外风险诊费</text>
+            <view class="title1">{{item.couponName}}</view>
+            <view class="titleInfo" wx:if="{{item.couponBtnType === 3}}">
+              <text class="txt">{{item.couponDescribe[0]}}</text>
               <view></view>
-              <text class="txt">乘客交通意外险</text>
+              <text class="txt">{{item.couponDescribe[1]}}</text>
+            </view>
+            <view class="title2" wx:else>
+              <text wx:for="{{item.couponDescribe}}" wx:key="index">{{item}}</text>
             </view>
             <view class="iconBox">
+              <view class="icon-loc" wx:if="{{item.couponClinicName}}">
+                <image src="/images/card/cardtype2_loc.png" mode="widthFix"></image>
+                <text>{{item.couponClinicName}}</text>
+              </view>
               <view class="icon-date">
                 <image src="/images/card/cardtype4_date.png" mode="widthFix"></image>
-                <text>2018-8-8 ~ 2019-8-7</text>
+                <text>{{item.couponTerm}}</text>
               </view>
             </view>
+            <view class="cardNum">{{item.couponNumber}}</view>
           </view>
           <view class="btn">
-            <image src="/images/card/cardtype3_btn.png" mode="widthFix"></image>
-          </view>
-        </view>
-      </view>
-      <view class="item item4">
-        <image class="item-bg" src="/images/card/cardtype4_bg.png"></image>
-        <view class="content">
-          <view class="left">
-            <view class="title1">爱齿怡会员专享</view>
-            <view class="title2">价值
-              <text>760</text> 元全场通用券</view>
-            <view class="iconBox">
-              <view class="icon-date">
-                <image src="/images/card/cardtype4_date.png" mode="widthFix"></image>
-                <text>2018-8-8 ~ 2019-8-7</text>
-              </view>
+            <view class="box">
+              <image src="/images/card/cardtype{{item.couponBtnType}}_btn.png" mode="widthFix"></image>
             </view>
-          </view>
-          <view class="btn">
-            <image src="/images/card/cardtype4_btn.png" mode="widthFix"></image>
           </view>
         </view>
       </view>

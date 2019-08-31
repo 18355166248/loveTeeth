@@ -2,7 +2,8 @@
   "pages": [
     "pages/home/home",
     "pages/personal/personal",
-    "pages/myCard/myCard"
+    "pages/myCard/myCard",
+    "pages/banner_link/banner_link"
   ],
   "window": {
     "navigationStyle": "default",

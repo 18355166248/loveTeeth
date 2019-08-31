@@ -25,24 +25,26 @@
 .cardBody .listBox>.item .content .left{text-align: center;color: #fff;width: calc(100% - 115rpx);overflow: hidden;}
 .cardBody .listBox>.item .content .left .title1{font-size: 32rpx;font-weight: bold;}
 .cardBody .listBox>.item .content .left .title2{font-size: 38rpx;font-weight: bold;padding: 10rpx 0;}
-.cardBody .listBox>.item .content .left .title2>text{font-size: 40rpx;font-weight: bold;font-style: italic;}
-.cardBody .listBox>.item .iconBox{display: flex;justify-content: space-around;align-items: center;width: 80%;margin: 0 auto;}
+.cardBody .listBox>.item .content .left .title2>text:nth-child(2){font-size: 40rpx;font-weight: bold;font-style: italic;}
+.cardBody .listBox>.item .content .left .title2>text:last-child{padding-left: 8rpx;}
+.cardBody .listBox>.item .iconBox{display: flex;justify-content: space-around;align-items: center;width: 90%;margin: 0 auto;}
 .cardBody .listBox>.item .iconBox>view{display: flex;justify-content: space-around;align-items: center;margin-bottom: 15rpx;}
-.cardBody .listBox>.item .iconBox  text{font-size: 18rpx;margin-left: 10rpx;}
+.cardBody .listBox>.item .iconBox  text{font-size: 20rpx;margin-left: 10rpx;}
 .cardBody .listBox>.item .iconBox .icon-loc>image{width: 22rpx;height: 28rpx;}
 .cardBody .listBox>.item .iconBox .icon-date>image{width: 28rpx;height: 25rpx;}
 .cardBody .listBox>.item .cardNum{font-size: 30rpx;text-align: left;padding-left: 30rpx;}
 .cardBody .listBox>.item .btn{width: 140rpx;text-align: center;left: -8rpx;}
-.cardBody .listBox>.item .btn>image{width: 105rpx;height: 96rpx;}
+.cardBody .listBox>.item .btn .box>image{width: 105rpx;height: 96rpx;}
 
 /* 按钮类型2 */
-.cardBody .listBox>.item2 .content .left .title1{font-size: 18rpx;}
+.cardBody .listBox>.item2 .content .left .title1{font-size: 20rpx;}
 .cardBody .listBox>.item2 .content .left .title2{padding: 5rpx 0;}
 .cardBody .listBox>.item2 .content .left .icon_star{width: 49rpx;height: 42rpx;}
 
 /* 按钮类型3 */
-.cardBody .listBox>.item .content .left .titleInfo{margin-bottom: 30rpx;}
-.cardBody .listBox>.item .content .left .titleInfo>.txt{width: auto; padding: 5rpx 15rpx;background-color: #fff;border-radius: 20rpx;text-align: center;font-size: 22rpx;color: #92aab7;}
+.cardBody .listBox>.item3 .content .left .title1{font-size: 38rpx;font-weight: bold;}
+.cardBody .listBox>.item3 .content .left .titleInfo{margin-bottom: 30rpx;}
+.cardBody .listBox>.item3 .content .left .titleInfo>.txt{width: auto; padding: 5rpx 15rpx;background-color: #fff;border-radius: 20rpx;text-align: center;font-size: 22rpx;color: #92aab7;}
 .cardBody .listBox>.item3 .content .left .title2{padding-bottom: 8rpx;}
 
 
