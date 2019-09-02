@@ -34,8 +34,8 @@ Page({
     interval: 5000,
     duration: 1000,
     swiperCurrent: 0,
-    form:{
-      card:'' //卡号
+    form: {
+      card: '' //卡号
     },
     plan: 0,
     planList: ['方案一', '方案二', '方案三'],
@@ -43,22 +43,26 @@ Page({
       src: '/images/index/logo_c_1.png',
       txt: '查找诊所',
       url: '',
-      width: '59rpx'
+      width: '59rpx',
+      openType: '' //按钮类型 如果有别的都加在这个对象里 如 share
     }, {
       src: '/images/index/logo_c_2.png',
       txt: '齿爱一生',
       url: '',
-      width: '47rpx'
+      width: '47rpx',
+      openType: ''
     }, {
       src: '/images/index/logo_c_3.png',
       txt: '会员专享',
       url: '',
-      width: '56rpx'
+      width: '56rpx',
+      openType: ''
     }, {
       src: '/images/index/logo_c_4.png',
       txt: '客服牙牙',
       url: '',
-      width: '51rpx'
+      width: '51rpx',
+      openType: ''
     }],
     lockList: [{
       src: '/images/index/lock_1.png',
@@ -142,7 +146,7 @@ Page({
     })
   },
   //banner 跳外链
-  bannerClick(e){
+  bannerClick(e) {
     console.log(e.currentTarget.dataset.url)
     let url = e.currentTarget.dataset.url
     wx.navigateTo({
@@ -150,26 +154,26 @@ Page({
     })
   },
   //卡号
-  bindKeyInput: function (e) {
+  bindKeyInput: function(e) {
     this.setData({
       'form.card': e.detail.value
     })
   },
-  activateClick(){
-    console.log('激活卡号',this.data.form.card)
-    if (this.data.form.card === ''){
+  activateClick() {
+    console.log('激活卡号', this.data.form.card)
+    if (this.data.form.card === '') {
       icom.alert('请您输入卡号')
       return
     }
     //---------------------------ajax 提交数据
   },
   //查找方案
-  planClick(){
-    console.log('查找方案', this.data.plan+1)
+  planClick() {
+    console.log('查找方案', this.data.plan + 1)
     //---------------------------ajax 跳转链接
   },
   //其他页面跳转
-  navigatClick(){
+  navigatClick() {
     icom.alert('敬请期待')
   }
 }) //end page

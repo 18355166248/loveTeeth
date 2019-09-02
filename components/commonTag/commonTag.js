@@ -1,4 +1,5 @@
 // components/commonTag/commonTag.js
+const iuser = require('../../common/js/base/user.js');
 Component({
   /**
    * 组件的属性列表
@@ -14,7 +15,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    openType:'getUserInfo'
   },
 
   /**
@@ -40,6 +41,22 @@ Component({
       wx.redirectTo({
         url: url,
       })
+    },
+    bindgetuserinfo(e){
+      // console.log(e)
+      if (e.detail.errMsg !="getUserInfo:ok"){
+        wx.showModal({
+          title: '提示',
+          content: '该程序需要获取您的用户信息',
+          showCancel:false
+        })
+      }else{
+        iuser.getUserInfo(()=>{
+          wx.redirectTo({
+            url: '/pages/personal/personal',
+          })
+        })
+      }
     }
   }
 })

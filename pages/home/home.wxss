@@ -103,6 +103,8 @@
 
 .form .form-view .common-view {
   display: flex;
+  height: 53rpx;
+  line-height: 53rpx;
 }
 
 .form .form-title {
@@ -117,12 +119,11 @@
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   box-sizing: border-box;
-  height: 49rpx;
-  line-height: 49rpx;
+  /* height: 49rpx; */
+  /* line-height: 49rpx; */
   background-color: #fff;
-  margin-top: 2rpx;
   color: #969697;
-  font-size: 20rpx;
+  font-size: 0;
 }
 
 .form .form-view .plan-left-c {
@@ -175,18 +176,30 @@
 
 .form .form-view .left-c::after {
   position: absolute;
-  top: -2rpx;
-  bottom: -2rpx;
+  top: 0;
+  bottom: 0;
   left: -2rpx;
   right: -2rpx;
   background: linear-gradient(to left, #75e1b6, #1ea6d6);
   content: '';
-  z-index: -1;
+  z-index: 1;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
 
-.form .form-view .left-c image {
+.form .form-view .left-c .left-c-icon {
+  position: absolute;
+  left: 0;
+  top: 2rpx;
+  width: 70rpx;
+  height: 49rpx;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.form .form-view .left-c .left-c-icon image {
   width: 24rpx;
   height: 24rpx;
   position: absolute;
@@ -198,6 +211,12 @@
 .form .form-view .left-c input {
   height: 49rpx;
   font-size: 20rpx;
+  position: absolute;
+  width: calc(100% - 70rpx);
+  left: 70rpx;
+  top: 2rpx;
+  z-index: 2;
+  background-color: #fff;
 }
 
 .form .form-view .right-c {
@@ -210,6 +229,7 @@
   font-size: 25rpx;
   height: 53rpx;
   line-height: 53rpx;
+  box-sizing: border-box;
 }
 
 /* 表单e */
@@ -232,7 +252,15 @@
   flex-direction: column;
   align-items: center;
 }
-
+.navigation-list > view.navigation-item>button{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
 .navigation-list > view.navigation-item > view.navigation-image {
   width: 60rpx;
   height: 60rpx;

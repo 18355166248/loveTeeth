@@ -23,7 +23,9 @@
       <text class="form-title">开启您的年度口腔体检</text>
       <view class="common-view">
         <view class="left-c">
-          <image src="/images/index/edit_icon.png"></image>
+          <view class="left-c-icon">
+            <image src="/images/index/edit_icon.png"></image>
+          </view>
           <input placeholder="输入卡号" value="{{form.card}}" type="number" bindinput="bindKeyInput"/>
         </view>
         <view class="right-c" catchtap="activateClick">激 活</view>
@@ -49,11 +51,12 @@
 
   <!-- 导航 -->
   <view class="navigation-list">
-    <view class="navigation-item" wx:for="{{navigationList}}" wx:key="{{index}}" catchtap="navigatClick">
+    <view class="navigation-item" wx:for="{{navigationList}}" wx:key="{{index}}">
       <view class="navigation-image">
         <image src="{{item.src}}" style="width: {{item.width}}" mode="widthFix"></image>
       </view>
       <text>{{item.txt}}</text>
+      <button class="item item{{index+1}} button" open-type="{{item.openType}}" hover-class="none" catchtap="navigatClick"></button>
     </view>
   </view>
 

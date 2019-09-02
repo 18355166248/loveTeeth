@@ -12,14 +12,16 @@ let $page, $query, SessionKey, OpenID;
  */
 let PageData = {
   appData: app.data, //拿到全局的数据
+  hasUserInfo: false,
+  userInfo: {}
 };
 
 Page({
   data: Object.assign({
-    myCard:{
-      isActive:false,//是否激活
-      cardBg: ['/images/card/card_bg.png','/images/card/card_bg_active.png'],//背景
-      cardTips: ['激活“爱齿怡”','已激活'] //文字
+    myCard: {
+      isActive: false, //是否激活
+      cardBg: ['/images/card/card_bg.png', '/images/card/card_bg_active.png'], //背景
+      cardTips: ['激活“爱齿怡”', '已激活'] //文字
     },
     cardNo: 888,
     cur: 1800,
@@ -44,35 +46,44 @@ Page({
     menuList: [{
       src: '/images/personal/menu1.png',
       url: '',
-      txt: '口腔保险'
+      txt: '口腔保险',
+      openType: '' //按钮类型 如果有别的都加在这个对象里 如 share
     }, {
       src: '/images/personal/menu2.png',
       url: '',
-      txt: '开票中心'
+      txt: '开票中心',
+      openType: ''
     }, {
       src: '/images/personal/menu3.png',
       url: '',
-      txt: '我的评价'
+      txt: '我的评价',
+      openType: ''
     }, {
       src: '/images/personal/menu4.png',
       url: '',
-      txt: '客服牙牙'
+      txt: '客服牙牙',
+      openType: ''
     }, {
       src: '/images/personal/menu5.png',
       url: '',
-      txt: '购物车'
+      txt: '购物车',
+      openType: ''
     }, {
       src: '/images/personal/menu6.png',
       url: '',
-      txt: '领券中心'
+      txt: '领券中心',
+      openType: ''
     }, {
       src: '/images/personal/menu7.png',
       url: '',
-      txt: '收藏栏'
+      txt: '收藏栏',
+      openType: ''
     }, {
       src: '/images/personal/menu8.png',
       url: '',
-      txt: '足迹'
+      txt: '足迹',
+      openType: ''
+
     }]
   }, PageData), //页面的初始数据
   async onLoad(option) {

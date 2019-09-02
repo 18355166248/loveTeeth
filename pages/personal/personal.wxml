@@ -52,6 +52,7 @@
         <image src="{{item.src}}" mode="widthFix"></image>
       </view>
       <text class="menu-txt">{{ item.txt }}</text>
+      <button class="item item{{index+1}} button" open-type="{{item.openType}}" hover-class="none"></button>
     </view>
   </view>
 </view>

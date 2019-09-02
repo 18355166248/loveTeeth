@@ -32,7 +32,15 @@
 .common-tag .main-box > view:last-child {
   padding-top: 118rpx;
 }
-
+.common-tag .main-box > view:last-child button{
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
 .common-tag .main-box > .tag-center {
   padding-top: 10rpx;
   position: relative;
