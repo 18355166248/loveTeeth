@@ -1,6 +1,7 @@
 const icom = require('common/js/base/com.js');
 import config from 'config.js';
 import Init from 'common/js/base/init.js';
+// import Os from 'common/js/base/os.js';
 import API from 'common/js/API.js';
 let sceneName = ""; //来源
 let scenariovalue = "";//场景值
@@ -11,6 +12,7 @@ App({
     this.launchoptions= options;
     this.beats = Init;//初始化一下init.js,这样每个页面都可以拿到
     this.API = API;// 初始化 一下API.js, 这样每个页面都可以拿到
+    // this.Os = Os;
     if (options.query.scene) {
       sceneName = options.query.scene;
       this.data.sceneName = sceneName;

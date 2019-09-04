@@ -2,6 +2,7 @@ const app = getApp();
 const beats = app.beats;
 const API = app.API;
 const icom = require('../../common/js/base/com.js');
+const iuser = require('../../common/js/base/user.js');
 import regeneratorRuntime from '../../common/js/plugs/regeneratorRuntime';
 import promisify from '../../common/js/plugs/promisify.js';
 import config from '../../config.js';
@@ -23,26 +24,30 @@ Page({
       cardBg: ['/images/card/card_bg.png', '/images/card/card_bg_active.png'], //背景
       cardTips: ['激活“爱齿怡”', '已激活'] //文字
     },
+    userName: '口腔一号',
     cardNo: 888,
     cur: 1800,
     max: 99999,
     active: '',
     personalList: [{
-      src: '/images/personal/card_bg_1.png',
-      url: '',
-      txt: '点击查看',
-      color: '#2e88c1'
-    }, {
-      src: '/images/personal/card_bg_2.png',
-      url: '',
-      txt: '点击查看',
-      color: '#4da35f'
-    }, {
-      src: '/images/personal/card_bg_3.png',
-      url: '',
-      txt: '点击查看',
-      color: '#45c7e1'
-    }],
+        src: '/images/personal/card_bg_1.png',
+        url: '',
+        txt: '点击查看',
+        color: '#2e88c1'
+      }, {
+        src: '/images/personal/card_bg_2.png',
+        url: '',
+        txt: '点击查看',
+        color: '#4da35f'
+      }
+      // , {
+      //   src: '/images/personal/card_bg_3.png',
+      //   url: '',
+      //   txt: '点击查看',
+      //   color: '#45c7e1'
+      // }
+    ],
+
     menuList: [{
       src: '/images/personal/menu1.png',
       url: '',
@@ -89,6 +94,7 @@ Page({
   async onLoad(option) {
     $page = this;
     $query = option;
+    iuser.getUserInfo()
   },
   onReady: function() {}, //监听页面初次渲染完成
   onShow: function() {}, //监听页面显示

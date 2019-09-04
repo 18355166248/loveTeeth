@@ -5,6 +5,7 @@
     <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperChange" circular='true'>
       <block wx:for="{{imgUrls}}" wx:key="{{index}}">
         <swiper-item class="swiper-item" data-url="{{item.url}}" catchtap="bannerClick">
+          <image src="{{item.title}}" mode="widthFix" class="banner-title"></image>
           <image bindchange='imageChange' src="{{item.img}}" id="{{index}}" class="banner-image" />
         </swiper-item>
       </block>
@@ -17,26 +18,38 @@
     </view>
   </view>
 
+  <!-- 扫描二维码 -->
+  <view class="qr-code">
+    <view class="qr-code-title ac">
+      <image src="/images/index/codeTitle.png" mode="widthFix"></image>
+    </view>
+    <view class="camera ac">
+      <image bindtap="callQrCode" src="/images/index/camera.png" mode="widthFix"></image>
+    </view>
+    <view class="camera-txt">点击扫描二维码</view>
+    <view class="form-or ac">
+      <text>或</text>
+    </view>
+  </view>
+
   <!-- 表单 -->
   <view class="form">
     <view class="form-view" style="margin-bottom: 25rpx;">
-      <text class="form-title">开启您的年度口腔体检</text>
       <view class="common-view">
         <view class="left-c">
           <view class="left-c-icon">
             <image src="/images/index/edit_icon.png"></image>
           </view>
-          <input placeholder="输入卡号" value="{{form.card}}" type="number" bindinput="bindKeyInput"/>
+          <input placeholder="输入卡号" value="{{form.card}}" type="number" bindinput="bindKeyInput" />
         </view>
         <view class="right-c" catchtap="activateClick">激 活</view>
       </view>
     </view>
-    <view class="form-view">
+    <!-- <view class="form-view">
       <text class="form-title">查找您的专属省钱方案</text>
       <view class="common-view">
         <view class="plan-left-c">
           <image class="search_icon" src="/images/index/search_icon.png"></image>
-          <!-- <view >{{ plan }}</view> -->
           <picker class="text" bindchange="bindPickerChange" value="{{plan}}" range="{{planList}}">
             <view class="picker">
               {{planList[plan]}}
@@ -46,7 +59,7 @@
         </view>
         <view class="plan-right-c" catchtap="planClick">查 找</view>
       </view>
-    </view>
+    </view> -->
   </view>
 
   <!-- 导航 -->
@@ -56,7 +69,7 @@
         <image src="{{item.src}}" style="width: {{item.width}}" mode="widthFix"></image>
       </view>
       <text>{{item.txt}}</text>
-      <button class="item item{{index+1}} button" open-type="{{item.openType}}" hover-class="none" catchtap="navigatClick"></button>
+      <button class="item item{{index+1}} button" open-type="{{item.openType}}" hover-class="none" catchtap="navigatClick" data-url="{{item.url}}"></button>
     </view>
   </view>
 
@@ -69,7 +82,7 @@
   </view>
 
   <!-- 卡 -->
-  <view class="mind-title">
+  <!-- <view class="mind-title">
     <image src="/images/index/mind.png" mode="widthFix"></image>
   </view>
   <view class="card-box">
@@ -77,10 +90,10 @@
       <image src="{{item.src}}" mode="widthFix"></image>
       <view class="card-bg" style="color: {{item.color}}">{{ item.txt }}</view>
     </view>
-  </view>
+  </view> -->
 </scroll-view>
 
 <!-- 公共tag -->
-<commonTag></commonTag>
+<commonTag hasUserInfo="{{hasUserInfo}}"></commonTag>
 <!-- 公共 -->
 <!----article end----->

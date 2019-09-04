@@ -2,6 +2,7 @@ const app = getApp();
 const beats = app.beats;
 const API = app.API;
 const icom = require('../../common/js/base/com.js');
+const iuser = require('../../common/js/base/user.js');
 import regeneratorRuntime from '../../common/js/plugs/regeneratorRuntime';
 import promisify from '../../common/js/plugs/promisify.js';
 import config from '../../config.js';
@@ -12,19 +13,24 @@ let $page, $query, SessionKey, OpenID;
  */
 let PageData = {
   appData: app.data, //拿到全局的数据
+  hasUserInfo: false,
+  userInfo: {}
 };
 
 Page({
   data: Object.assign({
     imgUrls: [{
         img: '/images/index/banner1.png',
+        title: '/images/index/banner_title_w.png',
         url: 'https://mp.weixin.qq.com' //外链 测试
       },
       {
         img: '/images/index/banner2.png',
+        title: '/images/index/banner_title_b.png',
         url: 'https://mp.weixin.qq.com'
       }, {
         img: '/images/index/banner3.png',
+        title: '/images/index/banner_title_b.png',
         url: 'https://mp.weixin.qq.com'
       }
     ],
@@ -42,7 +48,7 @@ Page({
     navigationList: [{
       src: '/images/index/logo_c_1.png',
       txt: '查找诊所',
-      url: '',
+      url: '/pages/order/order',
       width: '59rpx',
       openType: '' //按钮类型 如果有别的都加在这个对象里 如 share
     }, {
@@ -102,6 +108,7 @@ Page({
     $page = this;
     $query = option;
     // await beats.signIn()
+    iuser.getUserInfo()
   },
   onReady: function() {}, //监听页面初次渲染完成
   onShow: function() {
@@ -173,8 +180,20 @@ Page({
     //---------------------------ajax 跳转链接
   },
   //其他页面跳转
-  navigatClick() {
-    icom.alert('敬请期待')
+  navigatClick(e) {
+    const url = e.currentTarget.dataset.url
+    if (url) wx.navigateTo({
+      url
+    })
+    else icom.alert('敬请期待')
+  },
+  // 调用扫码
+  callQrCode() {
+    wx.scanCode({
+      success(res) {
+        console.log(res)
+      }
+    })
   }
 }) //end page
 

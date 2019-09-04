@@ -2,6 +2,7 @@ const app = getApp();
 const beats = app.beats;
 const API = app.API;
 const icom = require('../../common/js/base/com.js');
+const iuser = require('../../common/js/base/user.js');
 import regeneratorRuntime from '../../common/js/plugs/regeneratorRuntime';
 import promisify from '../../common/js/plugs/promisify.js';
 import config from '../../config.js';
@@ -12,6 +13,8 @@ let $page, $query, SessionKey, OpenID;
  */
 let PageData = {
   appData: app.data, //拿到全局的数据
+  hasUserInfo: false,
+  userInfo: {},
   myCard: {
     isActive: false, //是否激活
     cardBg: ['/images/card/card_bg.png', '/images/card/card_bg_active.png'], //激活和未激活背景不同
@@ -36,23 +39,27 @@ let PageData = {
       "couponTerm": "2018-8-8~2019-8-7 ",
       "couponNumber": "No .000000000000000000",
       "couponBtnType": 1,
+      "status": 1 // 1:使用 0: 未使用
     },
     {
       "couponbg": "/images/card/cardtype2_bg.png",
+      "couponIcon": "/images/card/diamonds.png",
       "couponName": "爱齿怡会员品牌专享折扣",
       "couponDescribe": ["瑞尔诊疗折扣券"],
       "couponClinicName": "全国瑞尔口腔连锁",
       "couponTerm": "2018-8-8~2019-8-7 ",
       "couponNumber": "No .000000000000000000",
       "couponBtnType": 2,
+      "status": 0 // 1:使用 0: 未使用
     }, {
       "couponbg": "/images/card/cardtype3_bg.png",
       "couponName": "爱齿怡会员专属保障",
-      "couponDescribe": ["洁牙意外风险诊费","乘客交通意外险"],
+      "couponDescribe": ["洁牙意外风险诊费", "乘客交通意外险"],
       "couponClinicName": "",
       "couponTerm": "2018-8-8~2019-8-7 ",
       "couponNumber": "",
       "couponBtnType": 3,
+      "status": 1 // 1:使用 0: 未使用
     }, {
       "couponbg": "/images/card/cardtype4_bg.png",
       "couponName": "爱齿怡会员专享",
@@ -61,6 +68,7 @@ let PageData = {
       "couponTerm": "2018-8-8~2019-8-7 ",
       "couponNumber": "",
       "couponBtnType": 4,
+      "status": 0 // 1:使用 0: 未使用
     }
   ]
 };
@@ -70,6 +78,7 @@ Page({
   async onLoad(option) {
     $page = this;
     $query = option;
+    iuser.getUserInfo()
     // await getMyCardinfo()
     // await getCouponList()
   },
@@ -85,11 +94,11 @@ Page({
 
   },
   //获取优惠券
-  async getCouponList(){
+  async getCouponList() {
     //------------------------------ajax
   },
   //优惠券跳转
-  couponbtnClick(e){
+  couponbtnClick(e) {
     console.log(e.currentTarget.dataset.type)
     let type = e.currentTarget.dataset.type
     //----------------------------------跳转相应链接

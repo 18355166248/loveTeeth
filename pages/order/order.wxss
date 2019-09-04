@@ -1,0 +1,105 @@
+/* 列表 s */
+
+#order .card-list {
+  padding: 10rpx 53rpx;
+}
+
+#order .card-list .card-item {
+  width: 100%;
+  height: 404rpx;
+  box-shadow: 3rpx 3rpx 4rpx rgba(0, 0, 0, 0.2);
+  border-radius: 10rpx;
+  position: relative;
+  margin-bottom: 67rpx;
+}
+
+#order .card-list .card-item .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+#order .card-list .card-item .card-item-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 224rpx;
+}
+
+#order .card-list .card-item .card-item-title image {
+  width: 91rpx;
+  margin-right: 20rpx;
+}
+
+#order .card-list .card-item .card-item-title text.logo-txt {
+  font: 400 62rpx SimHei, 'Microsoft YaHei';
+  color: #727171;
+  margin-top: 30rpx;
+}
+
+#order .card-list .card-item .card-item-title view:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#order .card-list .card-item .card-item-title  .card-item-describ {
+  color: #727171;
+  letter-spacing: 5rpx;
+}
+
+#order .card-list .card-item .card-item-title  .card-item-describ text {
+  vertical-align: middle;
+  font-size: 20rpx;
+}
+
+#order .card-list .card-item .card-item-title  .card-item-describ image {
+  width: 44rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+
+#order .card-list .card-item .card-address {
+  width: 100%;
+  height: 180rpx;
+  position: relative;
+  padding-left: 39rpx;
+}
+#order .card-list .card-item .card-address .card-order {
+  position: absolute;
+  width: 102rpx;
+  height: 74rpx;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 60rpx;
+  letter-spacing: 4rpx;
+  right: 52rpx;
+  top: 0;
+}
+#order .card-list .card-item .card-address .card-order image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#order .card-list .card-item .card-address .card-name {
+  font-size: 30rpx;
+  color: #000;
+  padding: 40rpx 0 20rpx 0;
+}
+
+#order .card-list .card-item .card-address .card-txt {
+  color: #9fa0a0;
+  font-size: 20rpx;
+}
+
+#order .card-list .card-item .card-address .card-txt text:last-child {
+  margin-left: 50rpx;
+}
+/* 列表 e */

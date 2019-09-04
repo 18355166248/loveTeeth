@@ -1,6 +1,5 @@
 const OS = function() {
 	let info = wx.getSystemInfoSync();
-	console.log(info);
 	let os = {};
 	os.info = info;
 	os.android = info.platform == 'android';
