@@ -175,6 +175,14 @@ Page({
   //其他页面跳转
   navigatClick() {
     icom.alert('敬请期待')
+  },
+  // 调用扫码
+  callQrCode() {
+    wx.scanCode({
+      success(res) {
+        console.log(res)
+      }
+    })
   }
 }) //end page
 

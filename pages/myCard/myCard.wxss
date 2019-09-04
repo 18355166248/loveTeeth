@@ -23,18 +23,21 @@
 .cardBody .listBox>.item>.item-bg{width: 100%;height: 100%;position: absolute;top: 8rpx;left: -8rpx;}
 .cardBody .listBox>.item .content{width: 100%;height: 100%;display: flex;justify-content: space-around;align-items: center;}
 .cardBody .listBox>.item .content .left{text-align: center;color: #fff;width: calc(100% - 115rpx);overflow: hidden;}
-.cardBody .listBox>.item .content .left .title1{font-size: 32rpx;font-weight: bold;}
-.cardBody .listBox>.item .content .left .title2{font-size: 38rpx;font-weight: bold;padding: 10rpx 0;}
-.cardBody .listBox>.item .content .left .title2>text:nth-child(2){font-size: 40rpx;font-weight: bold;font-style: italic;}
+.cardBody .listBox>.item .content .left .title1{font-size: 30rpx;font-weight: bold;margin-top: 20rpx;}
+.cardBody .listBox>.item .content .left .title2{font-size: 38rpx;font-weight: bold;padding: 10rpx 0 20rpx 0;}
+.cardBody .listBox>.item .content .left .title2>text:nth-child(2){font-size: 48rpx;font-weight: bold;font-style: italic;}
 .cardBody .listBox>.item .content .left .title2>text:last-child{padding-left: 8rpx;}
 .cardBody .listBox>.item .iconBox{display: flex;justify-content: space-around;align-items: center;width: 90%;margin: 0 auto;}
 .cardBody .listBox>.item .iconBox>view{display: flex;justify-content: space-around;align-items: center;margin-bottom: 15rpx;}
-.cardBody .listBox>.item .iconBox  text{font-size: 20rpx;margin-left: 10rpx;}
+.cardBody .listBox>.item .icon-medium image {width: 50rpx;}
+.cardBody .listBox>.item .iconBox text{font-size: 20rpx;margin-left: 10rpx;}
 .cardBody .listBox>.item .iconBox .icon-loc>image{width: 22rpx;height: 28rpx;}
 .cardBody .listBox>.item .iconBox .icon-date>image{width: 28rpx;height: 25rpx;}
-.cardBody .listBox>.item .cardNum{font-size: 30rpx;text-align: left;padding-left: 30rpx;}
-.cardBody .listBox>.item .btn{width: 140rpx;text-align: center;left: -8rpx;}
-.cardBody .listBox>.item .btn .box>image{width: 105rpx;height: 96rpx;}
+.cardBody .listBox>.item .cardNum{font-size: 27rpx;text-align: left;padding-left: 30rpx;}
+.cardBody .listBox>.item .btn{width: 140rpx;height: 100%;text-align: center;left: -8rpx;}
+.cardBody .listBox>.item .btn .box {position: relative;width: 100%;height: 100%;}
+.cardBody .listBox>.item .btn .box>image{width: 105rpx;height: 96rpx;position: absolute;top: 100rpx;left: 18rpx;}
+.cardBody .listBox>.item .btn .box>image.thank-icon{width: 212rpx;position: absolute;left: -30rpx;top: 65rpx;}
 
 /* 按钮类型2 */
 .cardBody .listBox>.item2 .content .left .title1{font-size: 20rpx;}

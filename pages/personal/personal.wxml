@@ -9,20 +9,19 @@
       </view>
     </view>
     <view class="describ">
-      <view class="">口腔一号</view>
-      <view class="">专属卡号: {{cardNo}}</view>
-      <view class="">
-        <view class="progress {{active}}">
-          <!-- <view></view> -->
-        </view>
+      <view>{{userName}}</view>
+      <!-- <view>专属卡号: {{cardNo}}</view>
+      <view>
+        <view class="progress {{active}}"></view>
       </view>
-      <view class="">积分累计: {{ cur + '/' + max }}</view>
+      <view>积分累计: {{ cur + '/' + max }}</view> -->
     </view>
   </view>
 
   <!-- 卡片 -->
   <view class="card">
-    <image src="{{myCard.isActive ? myCard.cardBg[1] : myCard.cardBg[0]}}" mode="widthFix"></image>
+    <view>
+      <image src="{{myCard.isActive ? myCard.cardBg[1] : myCard.cardBg[0]}}" mode="widthFix"></image>
     <view class="card-list">
       <view class="key">
         <image src="/images/personal/key.png"></image>
@@ -34,6 +33,7 @@
         <image src="/images/personal/friend.png"></image>
         <text>邀请好友</text>
       </view>
+    </view>
     </view>
   </view>
 

@@ -23,26 +23,30 @@ Page({
       cardBg: ['/images/card/card_bg.png', '/images/card/card_bg_active.png'], //背景
       cardTips: ['激活“爱齿怡”', '已激活'] //文字
     },
+    userName: '口腔一号',
     cardNo: 888,
     cur: 1800,
     max: 99999,
     active: '',
     personalList: [{
-      src: '/images/personal/card_bg_1.png',
-      url: '',
-      txt: '点击查看',
-      color: '#2e88c1'
-    }, {
-      src: '/images/personal/card_bg_2.png',
-      url: '',
-      txt: '点击查看',
-      color: '#4da35f'
-    }, {
-      src: '/images/personal/card_bg_3.png',
-      url: '',
-      txt: '点击查看',
-      color: '#45c7e1'
-    }],
+        src: '/images/personal/card_bg_1.png',
+        url: '',
+        txt: '点击查看',
+        color: '#2e88c1'
+      }, {
+        src: '/images/personal/card_bg_2.png',
+        url: '',
+        txt: '点击查看',
+        color: '#4da35f'
+      }
+      // , {
+      //   src: '/images/personal/card_bg_3.png',
+      //   url: '',
+      //   txt: '点击查看',
+      //   color: '#45c7e1'
+      // }
+    ],
+
     menuList: [{
       src: '/images/personal/menu1.png',
       url: '',

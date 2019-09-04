@@ -92,6 +92,43 @@
   background: #31c27c;
 }
 
+/* 二维码 s */
+
+.qr-code {
+  text-align: center;
+}
+
+.qr-code .qr-code-title image {
+  width: 317rpx;
+}
+
+.qr-code .camera image {
+  width: 146rpx;
+}
+
+.qr-code .camera {
+  margin: 25rpx 0 5rpx 0;
+}
+
+.qr-code .camera-txt {
+  font-size: 18rpx;
+  color: #808181;
+}
+.qr-code .form-or {
+  margin: 20rpx 0;
+}
+.qr-code .form-or > text {
+  display: inline-block;
+  width: 36rpx;
+  height: 36rpx;
+  background-image: linear-gradient(to right, #75e1b6, #1ea6d6);
+  font-size: 24rpx;
+  color: #fff;
+  border-radius: 18rpx;
+}
+
+/* 二维码 e */
+
 /* 表单s */
 
 /* #1ea6d6  #75e1b6 */
@@ -107,11 +144,6 @@
   line-height: 53rpx;
 }
 
-.form .form-title {
-  font-size: 22rpx;
-  color: #595757;
-}
-
 .form .form-view .left-c {
   position: relative;
   flex: 1;
@@ -119,8 +151,7 @@
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   box-sizing: border-box;
-  /* height: 49rpx; */
-  /* line-height: 49rpx; */
+  /* height: 49rpx; *//* line-height: 49rpx; */
   background-color: #fff;
   color: #969697;
   font-size: 0;
@@ -252,7 +283,8 @@
   flex-direction: column;
   align-items: center;
 }
-.navigation-list > view.navigation-item>button{
+
+.navigation-list > view.navigation-item>button {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -261,6 +293,7 @@
   opacity: 0;
   z-index: 1;
 }
+
 .navigation-list > view.navigation-item > view.navigation-image {
   width: 60rpx;
   height: 60rpx;

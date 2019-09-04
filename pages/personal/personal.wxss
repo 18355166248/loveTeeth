@@ -8,6 +8,7 @@
 .personal .head {
   width: 100%;
   position: relative;
+  z-index: 10;
 }
 
 .personal .head image.head-bg {
@@ -66,7 +67,7 @@
   font-size: 24rpx;
 }
 
-.personal .head .describ > view:last-child {
+.personal .head .describ > view:nth-child(3) {
   font-size: 14rpx;
 }
 
@@ -99,20 +100,30 @@
 
 .personal .card {
   margin: 90rpx 0 50rpx 0;
+  height: 190rpx;
   text-align: center;
+  position: relative;
+  z-index: 8;
+  top: -330rpx;
 }
-
-.personal .card > image {
-  width: 503rpx;
+.personal .card > view {
+  display: inline-block;
+  width: 685rpx;
+  padding: 6rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 6rpx 0 rgba(0, 0, 0, .3);
+}
+.personal .card > view > image {
+  width: 100%;
 }
 
 .personal .card .card-list {
   display: flex;
-  padding: 0 120rpx;
-  font-size: 22rpx;
+  font-size: 24rpx;
   color: #727171;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 16rpx;
+  padding-bottom: 20rpx;
 }
 
 .personal .card .card-list .key image, .personal .card .card-list .friend image {
@@ -122,11 +133,11 @@
 }
 
 .personal .card .card-list .key {
-  padding-left: 40rpx;
+  width: 50%;
 }
 
 .personal .card .card-list .friend {
-  padding-right: 40rpx;
+  width: 50%;
 }
 .personal .card .card-list .friend button{
   width: 100%;

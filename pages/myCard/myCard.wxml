@@ -27,6 +27,9 @@
             <view class="title2" wx:else>
               <text wx:for="{{item.couponDescribe}}" wx:key="index">{{item}}</text>
             </view>
+            <view class="icon-medium" wx:if="{{item.couponIcon}}">
+              <image src="{{item.couponIcon}}" mode="widthFix"></image>
+            </view>
             <view class="iconBox">
               <view class="icon-loc" wx:if="{{item.couponClinicName}}">
                 <image src="/images/card/cardtype2_loc.png" mode="widthFix"></image>
@@ -41,7 +44,8 @@
           </view>
           <view class="btn">
             <view class="box">
-              <image src="/images/card/cardtype{{item.couponBtnType}}_btn.png" mode="widthFix"></image>
+              <image wx:if="{{!item.status}}" src="/images/card/cardtype{{item.couponBtnType}}_btn.png" mode="widthFix"></image>
+              <image wx:else class="thank-icon" src="/images/card/thank.png" mode="widthFix"></image>
             </view>
           </view>
         </view>
