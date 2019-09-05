@@ -18,13 +18,16 @@ Page({
   data: Object.assign({
     imgUrls: [{
         img: '/images/index/banner1.png',
+        title: '/images/index/banner_title_w.png',
         url: 'https://mp.weixin.qq.com' //外链 测试
       },
       {
         img: '/images/index/banner2.png',
+        title: '/images/index/banner_title_b.png',
         url: 'https://mp.weixin.qq.com'
       }, {
         img: '/images/index/banner3.png',
+        title: '/images/index/banner_title_b.png',
         url: 'https://mp.weixin.qq.com'
       }
     ],

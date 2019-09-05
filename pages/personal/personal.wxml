@@ -1,6 +1,7 @@
 <view class="personal">
   <!-- 头部 -->
   <view class="head">
+    <image src="/images/index/banner_title_w.png" mode="widthFix" class="head-title"></image>
     <image class="head-bg" src="/images/personal/person_bg_top.png" mode="widthFix"></image>
     <view class="avator">
       <view>
@@ -22,18 +23,18 @@
   <view class="card">
     <view>
       <image src="{{myCard.isActive ? myCard.cardBg[1] : myCard.cardBg[0]}}" mode="widthFix"></image>
-    <view class="card-list">
-      <view class="key">
-        <image src="/images/personal/key.png"></image>
-        <text>{{myCard.isActive ? myCard.cardTips[1] : myCard.cardTips[0]}}</text>
+      <view class="card-list">
+        <view class="key">
+          <image src="/images/personal/key.png"></image>
+          <text>{{myCard.isActive ? myCard.cardTips[1] : myCard.cardTips[0]}}</text>
+        </view>
+        <view class="line"></view>
+        <view class="friend">
+          <button open-type="share"></button>
+          <image src="/images/personal/friend.png"></image>
+          <text>邀请好友</text>
+        </view>
       </view>
-      <view class="line"></view>
-      <view class="friend">
-        <button open-type="share"></button>
-        <image src="/images/personal/friend.png"></image>
-        <text>邀请好友</text>
-      </view>
-    </view>
     </view>
   </view>
 

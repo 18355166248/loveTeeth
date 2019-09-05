@@ -11,6 +11,13 @@
   z-index: 10;
 }
 
+.personal .head image.head-title {
+  position: absolute;
+  width: 278rpx;
+  left: 55rpx;
+  top: 63rpx;
+  z-index: 1;
+}
 .personal .head image.head-bg {
   width: 100%;
   position: absolute;
@@ -220,3 +227,13 @@
 }
 
 /* 菜单 e */
+
+
+/** iphoneX */
+
+@media screen and (width:375px) and (min-height:724px),
+       screen and (width:414px) and (min-height:808px) {
+  .personal .head image.head-title {
+    top: 90rpx;
+  }
+}

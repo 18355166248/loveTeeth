@@ -5,6 +5,7 @@
     <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperChange" circular='true'>
       <block wx:for="{{imgUrls}}" wx:key="{{index}}">
         <swiper-item class="swiper-item" data-url="{{item.url}}" catchtap="bannerClick">
+          <image src="{{item.title}}" mode="widthFix" class="banner-title"></image>
           <image bindchange='imageChange' src="{{item.img}}" id="{{index}}" class="banner-image" />
         </swiper-item>
       </block>
