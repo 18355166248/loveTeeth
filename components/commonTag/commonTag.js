@@ -8,6 +8,10 @@ Component({
     pageId: {
       type: Number,
       value: ''
+    },
+    hasUserInfo:{
+      type: Boolean,
+      value: ''
     }
   },
 
@@ -15,9 +19,23 @@ Component({
    * 组件的初始数据
    */
   data: {
-    openType:'getUserInfo'
+    openType: 'getUserInfo'
   },
-
+  /**
+   * 组件的生命周期
+   */
+  lifetimes: {
+    attached: function() {
+      // 在组件实例进入页面节点树时执行
+      this.authorPupop = this.selectComponent('#authorPupop');
+    },
+    detached: function() {
+      // 在组件实例被从页面节点树移除时执行
+    },
+    ready: function() {
+      // 在组件实例被从页面节点树移除时执行
+    }
+  },
   /**
    * 组件的方法列表
    */
@@ -26,37 +44,35 @@ Component({
      * pageId:1 首页 2 我的爱齿怡 3 我的卡片
      */
     navigatorClick(e) {
-      let id = Number(e.currentTarget.id),url
+      let id = Number(e.currentTarget.id),
+        url
       switch (id) {
         case 1:
           url = '/pages/home/home'
+          wx.redirectTo({
+            url: url,
+          })
           break
         case 2:
-          url = '/pages/personal/personal'
+          console.log(this.data.hasUserInfo)
+          if(this.data.hasUserInfo){
+            this.linkClick()
+          }else{
+            this.authorPupop.showPopup()
+          }
           break
         case 3:
           url = '/pages/myCard/myCard'
+          wx.redirectTo({
+            url: url,
+          })
           break
       }
-      wx.redirectTo({
-        url: url,
-      })
     },
-    bindgetuserinfo(e){
-      // console.log(e)
-      if (e.detail.errMsg !="getUserInfo:ok"){
-        wx.showModal({
-          title: '提示',
-          content: '该程序需要获取您的用户信息',
-          showCancel:false
-        })
-      }else{
-        iuser.getUserInfo(()=>{
-          wx.redirectTo({
-            url: '/pages/personal/personal',
-          })
-        })
-      }
+    linkClick() {
+      wx.redirectTo({
+        url: '/pages/personal/personal',
+      })
     }
   }
 })

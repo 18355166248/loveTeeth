@@ -94,6 +94,6 @@
 </scroll-view>
 
 <!-- 公共tag -->
-<commonTag></commonTag>
+<commonTag hasUserInfo="{{hasUserInfo}}"></commonTag>
 <!-- 公共 -->
 <!----article end----->

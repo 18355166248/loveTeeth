@@ -2,6 +2,7 @@ const app = getApp();
 const beats = app.beats;
 const API = app.API;
 const icom = require('../../common/js/base/com.js');
+const iuser = require('../../common/js/base/user.js');
 import regeneratorRuntime from '../../common/js/plugs/regeneratorRuntime';
 import promisify from '../../common/js/plugs/promisify.js';
 import config from '../../config.js';
@@ -93,6 +94,7 @@ Page({
   async onLoad(option) {
     $page = this;
     $query = option;
+    iuser.getUserInfo()
   },
   onReady: function() {}, //监听页面初次渲染完成
   onShow: function() {}, //监听页面显示

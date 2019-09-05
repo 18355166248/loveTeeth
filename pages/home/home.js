@@ -2,6 +2,7 @@ const app = getApp();
 const beats = app.beats;
 const API = app.API;
 const icom = require('../../common/js/base/com.js');
+const iuser = require('../../common/js/base/user.js');
 import regeneratorRuntime from '../../common/js/plugs/regeneratorRuntime';
 import promisify from '../../common/js/plugs/promisify.js';
 import config from '../../config.js';
@@ -12,6 +13,8 @@ let $page, $query, SessionKey, OpenID;
  */
 let PageData = {
   appData: app.data, //拿到全局的数据
+  hasUserInfo: false,
+  userInfo: {}
 };
 
 Page({
@@ -105,6 +108,7 @@ Page({
     $page = this;
     $query = option;
     // await beats.signIn()
+    iuser.getUserInfo()
   },
   onReady: function() {}, //监听页面初次渲染完成
   onShow: function() {

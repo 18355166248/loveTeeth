@@ -2,6 +2,7 @@ const app = getApp();
 const beats = app.beats;
 const API = app.API;
 const icom = require('../../common/js/base/com.js');
+const iuser = require('../../common/js/base/user.js');
 import regeneratorRuntime from '../../common/js/plugs/regeneratorRuntime';
 import promisify from '../../common/js/plugs/promisify.js';
 import config from '../../config.js';
@@ -12,6 +13,8 @@ let $page, $query, SessionKey, OpenID;
  */
 let PageData = {
   appData: app.data, //拿到全局的数据
+  hasUserInfo: false,
+  userInfo: {},
   myCard: {
     isActive: false, //是否激活
     cardBg: ['/images/card/card_bg.png', '/images/card/card_bg_active.png'], //激活和未激活背景不同
@@ -75,6 +78,7 @@ Page({
   async onLoad(option) {
     $page = this;
     $query = option;
+    iuser.getUserInfo()
     // await getMyCardinfo()
     // await getCouponList()
   },

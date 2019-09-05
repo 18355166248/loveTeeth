@@ -11,11 +11,12 @@
       </view>
       <text class="tag-center-text">我的卡片</text>
     </view>
-    <view id="2">
+    <view catchtap="navigatorClick" id="2">
       <image style="width: 40rpx;height: 40rpx;margin-bottom: 6rpx;" src="/images/index/user.png"></image>
       <text>我的爱齿怡</text>
-      <button open-type="{{openType}}" hover-class="none" lang="zh_CN" bindgetuserinfo="bindgetuserinfo"></button>
     </view>
   </view>
   <image class="tag-shadow" src="/images/index/tag_shadow.png" mode="widthFix"></image>
 </view>
+<!-- 公共弹窗 -->
+<authorPupop id="authorPupop" bind:linkClick="linkClick"></authorPupop>

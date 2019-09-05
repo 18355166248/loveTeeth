@@ -1,4 +1,5 @@
 // pages/order/order.js
+const iuser = require('../../common/js/base/user.js');
 Component({
   /**
    * 组件的属性列表
@@ -11,6 +12,8 @@ Component({
    * 组件的初始数据
    */
   data: {
+    hasUserInfo: false,
+    userInfo: {},
     orderList: [{
       bg: '/images/order/bg.png',
       logo: '/images/order/logo.png',
