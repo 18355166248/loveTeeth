@@ -69,7 +69,7 @@
         <image src="{{item.src}}" style="width: {{item.width}}" mode="widthFix"></image>
       </view>
       <text>{{item.txt}}</text>
-      <button class="item item{{index+1}} button" open-type="{{item.openType}}" hover-class="none" catchtap="navigatClick"></button>
+      <button class="item item{{index+1}} button" open-type="{{item.openType}}" hover-class="none" catchtap="navigatClick" data-url="{{item.url}}"></button>
     </view>
   </view>
 

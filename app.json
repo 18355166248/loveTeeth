@@ -3,6 +3,7 @@
     "pages/home/home",
     "pages/personal/personal",
     "pages/myCard/myCard",
+    "pages/order/order",
     "pages/banner_link/banner_link"
   ],
   "window": {

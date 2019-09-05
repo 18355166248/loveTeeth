@@ -45,7 +45,7 @@ Page({
     navigationList: [{
       src: '/images/index/logo_c_1.png',
       txt: '查找诊所',
-      url: '',
+      url: '/pages/order/order',
       width: '59rpx',
       openType: '' //按钮类型 如果有别的都加在这个对象里 如 share
     }, {
@@ -176,8 +176,12 @@ Page({
     //---------------------------ajax 跳转链接
   },
   //其他页面跳转
-  navigatClick() {
-    icom.alert('敬请期待')
+  navigatClick(e) {
+    const url = e.currentTarget.dataset.url
+    if (url) wx.navigateTo({
+      url
+    })
+    else icom.alert('敬请期待')
   },
   // 调用扫码
   callQrCode() {

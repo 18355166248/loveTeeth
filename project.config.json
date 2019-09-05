@@ -51,7 +51,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
@@ -64,6 +64,13 @@
 					"id": -1,
 					"name": "我的卡片",
 					"pathName": "pages/myCard/myCard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "诊所预约",
+					"pathName": "pages/order/order",
 					"query": "",
 					"scene": null
 				}
