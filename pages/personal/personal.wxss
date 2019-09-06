@@ -234,6 +234,7 @@
 @media screen and (width:375px) and (min-height:724px),
        screen and (width:414px) and (min-height:808px) {
   .personal .head image.head-title {
-    top: 90rpx;
+    /* top: 90rpx; */
+    top: 113rpx;
   }
 }
