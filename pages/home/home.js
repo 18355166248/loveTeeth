@@ -48,7 +48,7 @@ Page({
     navigationList: [{
       src: '/images/index/logo_c_1.png',
       txt: '查找诊所',
-      url: '/subpackages/pages/order/order',
+      url: '/subpackages/second/order/order',
       width: '59rpx',
       openType: '' //按钮类型 如果有别的都加在这个对象里 如 share
     }, {

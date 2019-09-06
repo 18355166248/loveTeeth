@@ -62,7 +62,7 @@ Component({
           }
           break
         case 3:
-          url = '/subpackages/pages/myCard/myCard'
+          url = '/subpackages/init/myCard/myCard'
           wx.redirectTo({
             url: url,
           })
@@ -71,7 +71,7 @@ Component({
     },
     linkClick() {
       wx.redirectTo({
-        url: '/subpackages/pages/personal/personal',
+        url: '/subpackages/init/personal/personal',
       })
     }
   }

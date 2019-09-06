@@ -56,21 +56,21 @@
 				{
 					"id": 0,
 					"name": "我的爱齿怡",
-					"pathName": "pages/personal/personal",
+					"pathName": "subpackages/init/personal/personal",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "我的卡片",
-					"pathName": "pages/myCard/myCard",
+					"pathName": "subpackages/init/myCard/myCard",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "诊所预约",
-					"pathName": "pages/order/order",
+					"pathName": "subpackages/second/order/order",
 					"query": "",
 					"scene": null
 				}

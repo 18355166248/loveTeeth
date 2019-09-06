@@ -23,12 +23,18 @@
   "sitemapLocation": "sitemap.json",
   "subpackages": [
     {
-      "root": "subpackages/",
-      "pages": [
-        "pages/personal/personal",
-        "pages/myCard/myCard",
-        "pages/order/order"
-      ]
+      "root": "subpackages/init/",
+      "pages": ["personal/personal", "myCard/myCard"]
+    },
+    {
+      "root": "subpackages/second/",
+      "pages": ["order/order"]
     }
-  ]
+  ],
+  "preloadRule": {
+    "pages/home/home": {
+      "network": "wifi",
+      "packages": ["subpackages/init/"]
+    }
+  }
 }
