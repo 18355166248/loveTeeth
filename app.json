@@ -1,11 +1,5 @@
 {
-  "pages": [
-    "pages/home/home",
-    "pages/personal/personal",
-    "pages/myCard/myCard",
-    "pages/order/order",
-    "pages/banner_link/banner_link"
-  ],
+  "pages": ["pages/home/home", "pages/banner_link/banner_link"],
   "window": {
     "navigationStyle": "default",
     "backgroundTextStyle": "light",
@@ -24,7 +18,17 @@
     }
   },
   "usingComponents": {
-    "authorPupop":"/components/authorPupop/index"
+    "authorPupop": "/components/authorPupop/index"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "subpackages": [
+    {
+      "root": "subpackages/",
+      "pages": [
+        "pages/personal/personal",
+        "pages/myCard/myCard",
+        "pages/order/order"
+      ]
+    }
+  ]
 }

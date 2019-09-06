@@ -1,5 +1,5 @@
 // pages/order/order.js
-const iuser = require('../../common/js/base/user.js');
+const iuser = require('../../../common/js/base/user.js');
 Component({
   /**
    * 组件的属性列表

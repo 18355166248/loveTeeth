@@ -1,11 +1,11 @@
 const app = getApp();
 const beats = app.beats;
 const API = app.API;
-const icom = require('../../common/js/base/com.js');
-const iuser = require('../../common/js/base/user.js');
-import regeneratorRuntime from '../../common/js/plugs/regeneratorRuntime';
-import promisify from '../../common/js/plugs/promisify.js';
-import config from '../../config.js';
+const icom = require('../../../common/js/base/com.js');
+const iuser = require('../../../common/js/base/user.js');
+import regeneratorRuntime from '../../../common/js/plugs/regeneratorRuntime';
+import promisify from '../../../common/js/plugs/promisify.js';
+import config from '../../../config.js';
 //-------------------------------------------------------初始化-------------------------------------------------------
 let $page, $query, SessionKey, OpenID;
 /**
