@@ -395,6 +395,7 @@
   .cssMedia {
   }
   .banner-title {
-    top: 90rpx;
+    /* top: 90rpx; */
+    top: 113rpx;
   }
 }

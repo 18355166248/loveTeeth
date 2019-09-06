@@ -47,7 +47,7 @@
   </view>
 
   <!-- 菜单 -->
-  <view class="menu-list">
+  <view class="menu-list" hidden='{{true}}'>
     <view class="menu-list-item" wx:for="{{menuList}}" wx:key="{{index}}">
       <view class="menu-icon">
         <image src="{{item.src}}" mode="widthFix"></image>

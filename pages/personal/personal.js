@@ -40,12 +40,12 @@ Page({
         txt: '点击查看',
         color: '#4da35f'
       }
-      // , {
-      //   src: '/images/personal/card_bg_3.png',
-      //   url: '',
-      //   txt: '点击查看',
-      //   color: '#45c7e1'
-      // }
+      , {
+        src: '/images/personal/card_bg_3.png',
+        url: '',
+        txt: '点击查看',
+        color: '#45c7e1'
+      }
     ],
 
     menuList: [{
