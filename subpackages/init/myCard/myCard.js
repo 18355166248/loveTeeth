@@ -54,7 +54,7 @@ let PageData = {
     }, {
       "couponbg": "/images/card/cardtype3_bg.png",
       "couponName": "爱齿怡会员专属保障",
-      "couponDescribe": ["洁牙意外风险诊费", "乘客交通意外险"],
+      "couponDescribe": ["洁牙间意外风险诊疗费补偿","洁牙间感染风险诊疗费补偿","洁牙间意外并发症意外保险金"],
       "couponClinicName": "",
       "couponTerm": "2018-8-8~2019-8-7 ",
       "couponNumber": "",

@@ -37,7 +37,7 @@ App({
    * 全局参数
    * */
   data: {
-
+    imgUrl: 'https://wechat.dhteam.net/aichiyi/resource/images/'
   },
   //初始化 end
   setShareData: function(options) {

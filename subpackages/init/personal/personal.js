@@ -104,6 +104,11 @@ Page({
   onReachBottom: function() {}, //页面上拉触底事件的处理函数
   onShareAppMessage: function() { //用户点击右上角分享
     return app.setShareData();
+  },
+  keyClick(){
+    wx.navigateTo({
+      url: '/subpackages/second/card_activated/card_activated',
+    })
   }
 }) //end page
 

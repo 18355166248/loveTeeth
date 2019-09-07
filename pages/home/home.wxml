@@ -96,4 +96,6 @@
 <!-- 公共tag -->
 <commonTag hasUserInfo="{{hasUserInfo}}"></commonTag>
 <!-- 公共 -->
+<!-- 公共弹窗 -->
+<authorPupop id="authorPupop" bind:linkClick="linkClick"></authorPupop>
 <!----article end----->

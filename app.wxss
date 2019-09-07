@@ -47,3 +47,4 @@
   z-index: 1;
   opacity: 0;
 }
+.linear{background: linear-gradient(to right, #75e1b6, #1ea6d6);-webkit-background-clip: text;color: transparent;}

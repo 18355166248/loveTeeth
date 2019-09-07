@@ -24,7 +24,7 @@
     <view>
       <image src="{{myCard.isActive ? myCard.cardBg[1] : myCard.cardBg[0]}}" mode="widthFix"></image>
       <view class="card-list">
-        <view class="key">
+        <view class="key" catchtap="keyClick">
           <image src="/images/personal/key.png"></image>
           <text>{{myCard.isActive ? myCard.cardTips[1] : myCard.cardTips[0]}}</text>
         </view>
@@ -47,15 +47,15 @@
   </view>
 
   <!-- 菜单 -->
-  <view class="menu-list" hidden='{{true}}'>
+  <!-- <view class="menu-list">
     <view class="menu-list-item" wx:for="{{menuList}}" wx:key="{{index}}">
       <view class="menu-icon">
-        <image src="{{item.src}}" mode="widthFix"></image>
+        <image src="https://wechat.dhteam.net/aichiyi/resource{{item.src}}" mode="widthFix"></image>
       </view>
       <text class="menu-txt">{{ item.txt }}</text>
       <button class="item item{{index+1}} button" open-type="{{item.openType}}" hover-class="none"></button>
     </view>
-  </view>
+  </view> -->
 </view>
 
 <!-- 公共tag -->

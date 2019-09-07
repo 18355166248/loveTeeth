@@ -1,0 +1,72 @@
+/* subpackages/second/card_activated/card_activated.wxss */
+
+.card_activated {width: 100%;}
+.title {font-size: 28rpx;padding: 60rpx 55rpx 25rpx;display: inline-block;font-weight: bold;}
+.listBox {text-align: center;width: 100%;}
+.listBox .item{font-size: 24rpx;color: #595757; height: 48rpx;line-height: 48rpx;background-color: #efefef;border-bottom: 1px solid #fdfdfd;}
+.listBox .item .icon{width: 16rpx;height: 15rpx;position: absolute;top: 50%;margin-top: -7.5rpx;right: 40rpx;}
+.listBox .itemActive{font-size: 20rpx;color: #fff;background: linear-gradient(to right, #75e1b6, #1ea6d6);}
+.listBox .itemActive .icon{display: none;}
+.listBox .item:last-child{border-bottom: none;}
+.tipBox{padding: 40rpx 60rpx;display: flex;justify-content: space-between;align-items: center;width: 100%;}
+.tipBox .icon{width: 56rpx;height: 47rpx;}
+.tipBox .txt{font-size: 18rpx;color: #898989;line-height: 2;width: calc(100%-56rpx);}
+.formBox{padding: 0 65rpx;}
+.formBox form{width: 100%;}
+.formBox form .section_con{height: 80rpx;border-bottom: 2rpx solid #9fa0a0;display: flex;justify-content: space-between;align-items: center;}
+.formBox form .section_title{width: 120rpx;text-align-last: justify;font-size: 26rpx;color: #595757;}
+.formBox form  input{width: calc(100% - 120rpx);height: 100%; font-size: 26rpx;color: #595757;text-align: right;}
+.placeholderStyle{font-size: 18rpx;}
+.formBox form .btn_area{display: flex;justify-content: space-between;align-items: center;margin-top: 60rpx;}
+.formBox form .btn_area .btn{width: 205rpx;height: 55rpx;line-height:55rpx;text-align: center;font-size: 33.87rpx;color: #fff; background-image: url(https://wechat.dhteam.net/aichiyi/resource/images/common/btnBg.png)}
+.formBox form .btn_area .sum{font-size: 26rpx;color: #595757;}
+.formBox form .btn_area .sum .yen{font-size: 22rpx;padding-right: 5rpx;font-weight: bold;}
+.formBox form .btn_area .sum .txt{font-size: 30rpx;font-weight: bold;}
+.formBox form .selectBox{margin-top: 30rpx;}
+.formBox form .selectBox .checkbox{display: block;font-size: 24rpx;color: #595757;margin-bottom: 10rpx;}
+.formBox form .selectBox .checkbox checkbox .wx-checkbox-input{width: 30rpx; /* 背景的宽 */height: 30rpx; /* 背景的高 */}
+.formBox form .selectBox .checkbox text{border-bottom: 2px solid #9fa0a0;display: inline-block;}
+
+
+
+/**
+   css media 适配
+*/
+
+/** iphone系列 */
+
+@media screen and (width:320px), screen and (width:375px), screen and (width:414px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓系列 */
+
+@media screen and (width:360px), screen and (width:393px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓 15:9 */
+
+@media screen and (width:360px) and (max-height:540px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓 18:9 */
+
+@media screen and (width:360px) and (min-height:600px),
+       screen and (width:412px) and (min-height:680px),
+       screen and (width:393px) {
+  .cssMedia {
+  }
+}
+
+/** iphoneX */
+
+@media screen and (width:375px) and (min-height:724px),
+       screen and (width:414px) and (min-height:808px) {
+  .cssMedia {
+  }
+}

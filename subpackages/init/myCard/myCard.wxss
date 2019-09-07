@@ -46,7 +46,7 @@
 
 /* 按钮类型3 */
 .cardBody .listBox>.item3 .content .left .title1{font-size: 38rpx;font-weight: bold;}
-.cardBody .listBox>.item3 .content .left .titleInfo{margin-bottom: 30rpx;}
+.cardBody .listBox>.item3 .content .left .titleInfo{margin-bottom: 20rpx;}
 .cardBody .listBox>.item3 .content .left .titleInfo>.txt{width: auto; padding: 5rpx 15rpx;background-color: #fff;border-radius: 20rpx;text-align: center;font-size: 22rpx;color: #92aab7;}
 .cardBody .listBox>.item3 .content .left .title2{padding-bottom: 8rpx;}
 

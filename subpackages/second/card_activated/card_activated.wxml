@@ -1,0 +1,44 @@
+<view class="card_activated">
+  <view class="title linear">{{infoList.title}}</view>
+  <view class="listBox">
+    <view class="item {{item.isitemActive ? 'itemActive' : ''}}" wx:for="{{infoList.list}}" 
+    wx:key="{{index}}" catchtap="{{item.isClick ? 'infoClick' : ''}}">
+      {{item.txt}}
+      <image class="icon" src="../images/icon_arr.png"></image>
+    </view>
+  </view>
+  <view class="tipBox">
+    <image class="icon" src="../images/icon_alarm.png"></image>
+    <text class="txt">为保证您的保障权益，请实名填写信息，错误的信息可能引发理赔失\n败；购买后若您发现您填写的信息错误，请立即联系客服修改。</text>
+  </view>
+  <view class="formBox">
+    <form bindsubmit="formSubmit">
+      <view class="section_con">
+        <view class="section_title">姓名</view>
+        <input name="userName" placeholder="请填写您的真实姓名" placeholder-class="placeholderStyle" placeholder-style="color:#b6b6b6;" type="text" />
+      </view>
+      <view class="section_con">
+        <view class="section_title">身份证号</view>
+        <input name="userId" placeholder="请填写您的身份证号" placeholder-class="placeholderStyle" placeholder-style=";color:#b6b6b6;" type="idcard" />
+      </view>
+      <view class="selectBox">
+        <checkbox-group bindchange="checkboxChange">
+          <view class="checkbox" wx:for="{{checkItems}}" wx:key="{{index}}" catchtap="{{item.isPrivacy ? 'readWordClick' : ''}}">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}" />
+            {{item.value[0]}}
+            <text wx:if="{{item.value[1]}}">{{item.value[1]}}</text>
+          </view>
+        </checkbox-group>
+      </view>
+      <view class="btn_area">
+        <view class="sum">合计:
+          <text class="yen linear">¥</text>
+          <text class="txt linear">{{infoList.price}}</text> </view>
+        <view class="btn">
+          确认激活
+          <button class="button" formType="submit">Submit</button>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>

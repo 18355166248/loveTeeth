@@ -1,5 +1,8 @@
 {
-  "pages": ["pages/home/home", "pages/banner_link/banner_link"],
+  "pages": [
+    "pages/home/home",
+    "pages/banner_link/banner_link"
+  ],
   "window": {
     "navigationStyle": "default",
     "backgroundTextStyle": "light",
@@ -24,17 +27,32 @@
   "subpackages": [
     {
       "root": "subpackages/init/",
-      "pages": ["personal/personal", "myCard/myCard"]
+      "pages": [
+        "personal/personal",
+        "myCard/myCard"
+      ]
     },
     {
       "root": "subpackages/second/",
-      "pages": ["order/order"]
+      "pages": [
+        "order/order",
+        "card_activated/card_activated"
+      ]
+    },
+    {
+      "root": "subpackages/third/",
+      "pages": [
+        "userPrivacy/userPrivacy",
+        "cardInfo/cardInfo"
+      ]
     }
   ],
   "preloadRule": {
     "pages/home/home": {
       "network": "wifi",
-      "packages": ["subpackages/init/"]
+      "packages": [
+        "subpackages/init/"
+      ]
     }
   }
 }

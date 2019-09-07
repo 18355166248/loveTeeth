@@ -51,7 +51,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 5,
 			"list": [
 				{
 					"id": 0,
@@ -72,6 +72,26 @@
 					"name": "诊所预约",
 					"pathName": "subpackages/second/order/order",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "激活页面",
+					"pathName": "subpackages/second/card_activated/card_activated",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "爱齿怡数据隐私政策",
+					"pathName": "subpackages/third/userPrivacy/userPrivacy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "详情页",
+					"pathName": "subpackages/third/cardInfo/cardInfo",
 					"scene": null
 				}
 			]

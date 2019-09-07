@@ -23,6 +23,8 @@
               <text class="txt">{{item.couponDescribe[0]}}</text>
               <view></view>
               <text class="txt">{{item.couponDescribe[1]}}</text>
+              <view></view>
+              <text class="txt">{{item.couponDescribe[2]}}</text>
             </view>
             <view class="title2" wx:else>
               <text wx:for="{{item.couponDescribe}}" wx:key="index">{{item}}</text>

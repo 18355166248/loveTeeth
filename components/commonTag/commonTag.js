@@ -54,7 +54,7 @@ Component({
           })
           break
         case 2:
-          console.log(this.data.hasUserInfo)
+          // console.log(this.data.hasUserInfo)
           if(this.data.hasUserInfo){
             this.linkClick()
           }else{

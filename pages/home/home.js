@@ -108,7 +108,13 @@ Page({
     $page = this;
     $query = option;
     // await beats.signIn()
-    iuser.getUserInfo()
+    this.authorPupop = this.selectComponent('#authorPupop');
+    iuser.getUserInfo(()=>{
+      this.authorPupop.hidePopup()
+    },()=>{
+      // 没授权过初次进入页面显示弹窗,否则不显示
+      this.authorPupop.showPopup()
+    })
   },
   onReady: function() {}, //监听页面初次渲染完成
   onShow: function() {
@@ -123,8 +129,8 @@ Page({
   onShareAppMessage: function() { //用户点击右上角分享
     return app.setShareData();
   },
-  bgmClick: function() { //背景音乐按钮点击事件
-    app.bgm.click();
+  linkClick() {
+    this.authorPupop.hidePopup()
   },
   /**
    * 轮播自动滑动时，获取当前的轮播id
@@ -173,6 +179,9 @@ Page({
       return
     }
     //---------------------------ajax 提交数据
+    wx.navigateTo({
+      url: '/subpackages/second/card_activated/card_activated',
+    })
   },
   //查找方案
   planClick() {
@@ -192,6 +201,9 @@ Page({
     wx.scanCode({
       success(res) {
         console.log(res)
+        wx.navigateTo({
+          url: '/subpackages/second/card_activated/card_activated',
+        })
       }
     })
   }

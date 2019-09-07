@@ -1,0 +1,9 @@
+<!--subpackages/third/cardInfo/cardInfo.wxml-->
+<view class="content">
+  <view class="goodsInfo"></view>
+  <view class="imgList">
+    <view class="item" wx:for="{{imgList}}" wx:key="{{index}}">
+      <image src="{{appData.imgUrl}}{{item}}" mode="widthFix"></image>
+    </view>
+  </view>
+</view>
