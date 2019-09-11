@@ -19,4 +19,7 @@
   <image class="tag-shadow" src="/images/index/tag_shadow.png" mode="widthFix"></image>
 </view>
 <!-- 公共弹窗 -->
-<authorPupop id="authorPupop" bind:linkClick="linkClick"></authorPupop>
+<!-- 显示授权获取角色信息 -->
+<authorPupop id="authorPupop" bind:linkClick="linkClick" bind:phoneShow="phoneShow"></authorPupop>
+<!-- 显示授权手机号 -->
+<authorPupop id="phonePupop" showPhone="{{true}}" bind:linkClick="linkClick" bind:phoneShow="phoneShow"></authorPupop>

@@ -1,5 +1,5 @@
 // components/commonTag/commonTag.js
-const iuser = require('../../common/js/base/user.js');
+const iuser = require('../../common/js/base/user.js')
 Component({
   /**
    * 组件的属性列表
@@ -9,7 +9,7 @@ Component({
       type: Number,
       value: ''
     },
-    hasUserInfo:{
+    hasUserInfo: {
       type: Boolean,
       value: ''
     }
@@ -19,7 +19,9 @@ Component({
    * 组件的初始数据
    */
   data: {
-    openType: 'getUserInfo'
+    openType: 'getUserInfo',
+    userFlag: true,
+    phoneFlag: true
   },
   /**
    * 组件的生命周期
@@ -27,14 +29,22 @@ Component({
   lifetimes: {
     attached: function() {
       // 在组件实例进入页面节点树时执行
-      this.authorPupop = this.selectComponent('#authorPupop');
+      this.authorPupop = this.selectComponent('#authorPupop')
+      this.phonePupop = this.selectComponent('#phonePupop')
+      iuser.getUserInfo(
+        () => {
+          this.authorPupop.togglePopup(false)
+        },
+        () => {
+          // 没授权过初次进入页面显示弹窗,否则不显示
+          this.authorPupop.togglePopup(true)
+        }
+      )
     },
     detached: function() {
       // 在组件实例被从页面节点树移除时执行
     },
-    ready: function() {
-      // 在组件实例被从页面节点树移除时执行
-    }
+    ready: function() {}
   },
   /**
    * 组件的方法列表
@@ -50,29 +60,31 @@ Component({
         case 1:
           url = '/pages/home/home'
           wx.redirectTo({
-            url: url,
+            url: url
           })
           break
         case 2:
           // console.log(this.data.hasUserInfo)
-          if(this.data.hasUserInfo){
-            this.linkClick()
-          }else{
-            this.authorPupop.showPopup()
+          if (this.data.hasUserInfo) {
+            this.linkClick('/subpackages/init/personal/personal')
+          } else {
+            this.authorPupop.togglePopup(true)
           }
           break
         case 3:
-          url = '/subpackages/init/myCard/myCard'
-          wx.redirectTo({
-            url: url,
-          })
+          if (this.data.hasUserInfo) {
+            this.linkClick('/subpackages/init/myCard/myCard')
+          } else {
+            this.authorPupop.togglePopup(true)
+          }
           break
       }
     },
-    linkClick() {
-      wx.redirectTo({
-        url: '/subpackages/init/personal/personal',
-      })
+    linkClick(url) {
+      wx.redirectTo({ url })
+    },
+    phoneShow(bool) {
+      this.phonePupop.togglePopup(bool)
     }
   }
 })

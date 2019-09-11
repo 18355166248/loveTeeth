@@ -11,7 +11,8 @@
 .article .con .txt2>view{line-height: 1.33;}
 .article .con .txt2 text.point{width: 8rpx;height: 8rpx;border-radius: 50%;background-color: #898989;display: inline-block;margin-right: 10rpx;margin-top: -4rpx;}
 .article .btnBox{border-top: 2rpx solid #bcbdbd;padding: 16rpx 0;display: flex;justify-content: space-between;align-items: center;}
+.article .btnBox-phone {text-align: center;border-top: 2rpx solid #bcbdbd;padding: 16rpx 0;}
 .article .btnBox>view{width: 50%;height: 100%;}
 .article .btnBox>view:first-child{border-right: 2rpx solid #bcbdbd;}
-.article .btnBox image{width: 61rpx;height: 30rpx;}
+.article .btnBox image, .article .btnBox-phone image{width: 61rpx;height: 30rpx;}
 .article .btnBox button{width: 100%;height: 100%;position:absolute;top: 0;left: 0;z-index: 1;opacity: 0;}

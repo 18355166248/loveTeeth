@@ -109,12 +109,6 @@ Page({
     $query = option;
     // await beats.signIn()
     this.authorPupop = this.selectComponent('#authorPupop');
-    iuser.getUserInfo(()=>{
-      this.authorPupop.hidePopup()
-    },()=>{
-      // 没授权过初次进入页面显示弹窗,否则不显示
-      this.authorPupop.showPopup()
-    })
   },
   onReady: function() {}, //监听页面初次渲染完成
   onShow: function() {
