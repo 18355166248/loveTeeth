@@ -52,8 +52,10 @@ Component({
         this.triggerEvent('phoneShow', true)
       }
     },
-    getPhone() {
+    getPhone(e) {
+      console.log(e)
       console.log('授权获取手机号')
+      //------------------把信息传入后台,后台解密拿手机号
     }
   }
 })

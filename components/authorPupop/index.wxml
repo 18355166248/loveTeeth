@@ -25,9 +25,9 @@
         </view>
       </view>
     </view>
-    <view class="btnBox-phone" wx:if="{{showPhone}}" bindtap="getPhone">
+    <view class="btnBox-phone" wx:if="{{showPhone}}">
       <image src="/images/common/confirm.png"></image>
-      <button hover-class="none" lang="zh_CN"></button>
+      <button class="button" hover-class="none"  open-type="getPhoneNumber"  bindgetphonenumber="getPhone"></button>
     </view>
     <view class="btnBox" wx:else>
       <view class="cancel" catchtap="cancelClick">
@@ -35,7 +35,7 @@
       </view>
       <view class="confirm">
         <image src="/images/common/confirm.png"></image>
-        <button open-type="{{openType}}" hover-class="none" lang="zh_CN" bindgetuserinfo="bindgetuserinfo"></button>
+        <button class="button" open-type="{{openType}}" hover-class="none" lang="zh_CN" bindgetuserinfo="bindgetuserinfo"></button>
       </view>
     </view>
   </view>
