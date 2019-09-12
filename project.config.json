@@ -25,7 +25,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.8.1",
-	"appid": "wxbd5cb7e16e17b39d",
+  "appid": "wxbd5cb7e16e17b39d",
 	"projectname": "loveTeeth",
 	"debugOptions": {
 		"hidedInDevtools": []

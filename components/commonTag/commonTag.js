@@ -1,5 +1,7 @@
 // components/commonTag/commonTag.js
 const iuser = require('../../common/js/base/user.js')
+const com = require('../../common/js/base/com.js')
+
 Component({
   /**
    * 组件的属性列表
@@ -35,7 +37,10 @@ Component({
         () => {
           this.authorPupop.togglePopup(false)
           // 授权获取用户信息成功后 判断 是否授权拿到用户手机号 如果没有授权获取手机号 则做处理弹窗授权手机号弹窗
-          // this.phonePupop.togglePopup(true)  // 显示弹窗授权手机号弹窗 true:显示 false:隐藏
+          const phoneNumber = com.storage('phoneNumber')
+          if (!com.checkStr(phoneNumber, 0)) {
+            // this.phonePupop.togglePopup(true)  // 显示弹窗授权手机号弹窗 true:显示 false:隐藏
+          }
         },
         () => {
           // 没授权过初次进入页面显示弹窗,否则不显示

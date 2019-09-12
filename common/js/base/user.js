@@ -17,9 +17,9 @@ const iuser = function () {
                 console.log('user code:', res.code);
                 user.code = res.code;
                 callback(res.code);
-                 let pages = getCurrentPages();
+                let pages = getCurrentPages();
                 let page = pages[pages.length - 1];
-                 page.setData({
+                page.setData({
                     code:res.code
                 });
             },

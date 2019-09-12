@@ -3,7 +3,7 @@
  */
 
 module.exports = {
-  appid: "wxb5ad95a20af4cbc5",
+  appid: "wxbd5cb7e16e17b39d",
   domain: "https://clarins.beats-digital.com", //正式
   shareData: {
     title: '国药口腔爱齿怡',
