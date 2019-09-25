@@ -102,6 +102,9 @@ Page({
     console.log(e.currentTarget.dataset.type)
     let type = e.currentTarget.dataset.type
     //----------------------------------跳转相应链接
+    wx.navigateTo({
+      url: '/subpackages/fourth/payment/payment',
+    })
   }
 }) //end page
 

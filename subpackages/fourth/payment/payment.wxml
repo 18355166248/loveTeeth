@@ -1,0 +1,25 @@
+<view id="payment">
+  <!-- 头部 -->
+  <view class="banner_title">
+    <image src="/images/index/banner_title_w.png" mode="widthFix"></image>
+  </view>
+  <view class="back" bindtap="back">
+    <text class="iconfont icon_down_arrow"></text>
+    <text>向商家付款</text>
+  </view>
+  <!-- 主体 -->
+  <view class="title ac">{{title}}</view>
+  <!-- 付款码 -->
+  <view class="pay_code">
+    <view>
+      <view class="click_code ac" bindtap="getPayCode">点击可查看付款码数字</view>
+      <view class="pay_code_1">
+        <image src="{{paycodeSrc1}}"></image>
+      </view>
+      <view class="pay_code_2">
+        <image src="{{paycodeSrc2}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class="ac confirm_txt">确认到店，请出示此页面给前台</view>
+</view>

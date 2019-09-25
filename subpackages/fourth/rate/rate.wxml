@@ -1,9 +1,44 @@
 <view id="rate">
+  <!-- 头部 -->
+  <view class="banner_title">
+    <image src="/images/index/banner_title_b.png" mode="widthFix"></image>
+  </view>
+  <!-- 卡片 -->
+  <view class="card">
+    <open-data type="userNickName" class="user_name"></open-data>
+    <image src="../images/thk_card.png" mode="widthFix"></image>
+  </view>
   <!-- 评价 -->
   <view class="rate_star">
     <view wx:for="{{rateList}}" wx:key="{{index}}" class="rate_area">
       <view class="area_title">{{item.text}}</view>
       <score gradeActive="{{item.grade}}" index="{{index}}" bind:change='changeGrade'></score>
     </view>
+  </view>
+  <!-- 选项 -->
+  <view class="evaluate">
+    <view wx:for="{{evaluateList}}" wx:key="{{key}}" data-id="{{index}}" bindtap="selectEvaluate" class="{{item.active ? 'active' : ''}}">
+      {{item.txt}}
+    </view>
+  </view>
+  <!-- 添加评论 -->
+  <view class="comment">
+    <textarea placeholder="添加评论..." value="{{commentValue}}" bindinput="bindinput"></textarea>
+    <view class="residue">
+      <text>加油, 还差{{commentNum}}个字</text>
+    </view>
+  </view>
+  <!-- 添加图片 -->
+  <view class="add_pic">
+    <image mode="widthFix" src="../images/add_png.png" class="add_pic_btn" bindtap="selectImage"></image>
+    <view class="add_pic_src" wx:for="{{picList}}" wx:key="{{index}}">
+      <image mode="aspectFit" src="{{item}}" catchtap="previewImageClick" data-src="{{item}}"></image>
+      <view class="icon_del" catchtap="iconDelClick" data-index="{{index}}">
+        <text class="iconfont icon-guanbi"></text>
+      </view>
+    </view>
+  </view>
+  <view class="submit">
+    <view bindtap="submit">发表评论</view>
   </view>
 </view>

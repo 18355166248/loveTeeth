@@ -1,0 +1,100 @@
+#payment {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://wechat.dhteam.net/aichiyi/resource/images/payment_bg.jpg);
+  background-size: cover;
+}
+
+/* 头部 s */
+
+#payment .banner_title {
+  width: 278rpx;
+  padding: 62rpx;
+  box-sizing: content-box;
+}
+
+#payment .banner_title image {
+  width: 100%;
+}
+
+/* 头部 e */
+
+/* 返回 向商家付款 s */
+
+#payment .back {
+  font-size: 30rpx;
+  padding-left: 34rpx;
+  color: #fff;
+}
+
+#payment .back text {
+  vertical-align: middle;
+}
+
+#payment .back .icon_down_arrow {
+  display: inline-block;
+  transform: rotate(90deg);
+  font-size: 40rpx;
+  margin-right: 10rpx;
+}
+
+/* 返回 向商家付款 e */
+
+#payment .title {
+  font-size: 40rpx;
+  color: #fff;
+  font-weight: 600;
+  margin: 48rpx 0 24rpx 0;
+}
+
+/* 付款码 s */
+
+#payment .pay_code {
+  padding: 0 40rpx;
+}
+
+#payment .pay_code > view {
+  width: 100%;
+  border-radius: 12rpx;
+  background-color: #fff;
+  padding: 49rpx 46rpx 62rpx 46rpx;
+  text-align: center;
+}
+#payment .pay_code > view .click_code {
+  font-size: 25rpx;
+  color: #7b7a7a;
+  margin-bottom: 25rpx;
+}
+#payment .pay_code > view .pay_code_1 {
+  width: 100%;
+  height: 180rpx;
+  background-color: #231815;
+}
+#payment .pay_code > view .pay_code_2 {
+  display: inline-block;
+  width: 230rpx;
+  height: 230rpx;
+  background-color: #231815;
+  margin-top: 42rpx;
+}
+#payment .pay_code > view .pay_code_1 image,
+#payment .pay_code > view .pay_code_2 image {
+  width: 100%;
+  height: 100%;
+}
+/* 付款码 e */
+
+#payment .confirm_txt {
+  font-size: 32rpx;
+  color: #fff;
+  margin-top: 64rpx;
+}
+
+/** iphoneX */
+
+@media screen and (width:375px) and (min-height:724px),
+       screen and (width:414px) and (min-height:808px) {
+  #payment .banner_title {
+    padding-top: 115rpx !important;
+  }
+}

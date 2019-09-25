@@ -4,12 +4,12 @@
 /*********在线字体代码start*********/
 @font-face {
   font-family: 'iconfont';  /* project id 1374778 */
-  src: url('//at.alicdn.com/t/font_1374778_qs3kgql327.eot');
-  src: url('//at.alicdn.com/t/font_1374778_qs3kgql327.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1374778_qs3kgql327.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1374778_qs3kgql327.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1374778_qs3kgql327.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1374778_qs3kgql327.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1374778_vpz2kxe0u1n.eot');
+  src: url('//at.alicdn.com/t/font_1374778_vpz2kxe0u1n.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1374778_vpz2kxe0u1n.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1374778_vpz2kxe0u1n.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1374778_vpz2kxe0u1n.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1374778_vpz2kxe0u1n.svg#iconfont') format('svg');
 }
 
 /*********在线字体代码end*********/
@@ -34,6 +34,11 @@
 
 .icon_edit::before {
     content: "\e640";
+}
+.icon-guanbi::before {
+    content: "\e65c";
+    color: #ccc;
+    font-size: 18rpx;
 }
 
 /*********字体文件中的代码end*********/

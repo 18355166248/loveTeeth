@@ -9,8 +9,5 @@
   height: 36rpx;
   width: 37rpx;
   display: inline-block;
-  margin-right: 20rpx;
-}
-.score > image:last-child {
-  margin-right: 0;
+  padding: 0 10rpx;
 }

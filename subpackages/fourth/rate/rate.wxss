@@ -1,6 +1,42 @@
-/* 评价 s */
-#rate .rate_star {
+/* 头部 s */
+
+#rate .banner_title {
+  width: 278rpx;
+  margin: 62rpx;
 }
+
+#rate .banner_title image {
+  width: 100%;
+}
+
+/* 头部 e */
+
+/* 卡片 s */
+
+#rate .card {
+  text-align: center;
+  margin: 10rpx 0 43rpx 0;
+  position: relative;
+}
+
+#rate .card image {
+  width: 709rpx;
+}
+#rate .card .user_name {
+  position: absolute;
+  top: 70rpx;
+  left: 70rpx;
+  font-weight: 700;
+  font-size: 30rpx;
+}
+/* 卡片 e */
+
+/* 评价 s */
+
+#rate .rate_star {
+  margin-bottom: 50rpx;
+}
+
 #rate .rate_star .rate_area {
   display: flex;
   align-items: center;
@@ -17,6 +53,129 @@
   border-radius: 24rpx;
   background-image: linear-gradient(to right, #75e1b6, #1ea5d6);
   text-align: center;
-  margin-right: 53rpx;
+  margin-right: 43rpx;
 }
+
 /* 评价 e */
+
+/* 选项 s */
+
+#rate .evaluate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #595757;
+  margin-bottom: 30rpx;
+}
+
+#rate .evaluate > view {
+  border: 2rpx solid #595757;
+  border-radius: 6rpx;
+  font-size: 26rpx;
+  padding: 13rpx 30rpx;
+  margin: 0 10rpx 30rpx 10rpx;
+}
+
+#rate .evaluate > view.active {
+  background-image: linear-gradient(to right, #75e1b6, #1ea5d6);
+  border: 2rpx solid transparent;
+  color: #fff;
+}
+
+/* 选项 e */
+
+/* 评论 s */
+
+#rate .comment {
+  text-align: center;
+}
+
+#rate .comment textarea {
+  display: inline-block;
+  width: 700rpx;
+  border: 2px solid #adaeae;
+  border-radius: 12rpx;
+  font-size: 25rpx;
+  padding: 20rpx 24rpx;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+#rate .comment .residue {
+  padding-right: 25rpx;
+  text-align: right;
+  color: #adaeae;
+  font-size: 22rpx;
+  margin: 8rpx 0;
+}
+
+/* 评论 e */
+
+/* 添加图片 s */
+
+#rate .add_pic {
+  padding-left: 21rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#rate .add_pic .add_pic_btn {
+  width: 160rpx;
+}
+
+#rate .add_pic .add_pic_src {
+  margin: 0 0 10rpx 20rpx;
+  width: 160rpx;
+  height: 160rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border: 2px solid #adaeae;
+  box-sizing: border-box;
+  padding: 4rpx;
+}
+
+#rate .add_pic .add_pic_src:nth-child(5) {
+  margin-left: 0;
+}
+
+#rate .add_pic .add_pic_src image {
+  width: 152rpx;
+  height: 152rpx;
+}
+
+#rate .icon_del{position: absolute;top: 0;right: 0;width: 35rpx;height: 35rpx;display: flex;justify-content: center;align-items: center;border-radius: 50%;background-color: rgba(0,0,0,0.3);}
+#rate .icon_del::before {content:'';position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1;filter:blur(20px);}
+#rate .icon_del text{margin-top: -6rpx;}
+
+
+/* 添加图片 e */
+
+#rate .submit {
+  text-align: center;
+  margin: 33rpx 0 30rpx 0;
+}
+
+#rate .submit > view {
+  display: inline-block;
+  width: 205rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  text-align: center;
+  font-size: 33.87rpx;
+  color: #fff;
+  background-image: url(https://wechat.dhteam.net/aichiyi/resource/images/common/btnBg.png);
+}
+
+/** iphoneX */
+
+@media screen and (width:375px) and (min-height:724px),
+       screen and (width:414px) and (min-height:808px) {
+  #rate .banner_title {
+    margin-top: 115rpx !important;
+  }
+
+  #rate {
+    padding-bottom: 30rpx;
+  }
+}
