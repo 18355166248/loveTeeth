@@ -1,0 +1,22 @@
+/* 评价 s */
+#rate .rate_star {
+}
+#rate .rate_star .rate_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25rpx;
+}
+
+#rate .rate_star .rate_area .area_title {
+  width: 287rpx;
+  height: 48rpx;
+  line-height: 47rpx;
+  font-size: 30rpx;
+  color: #fff;
+  border-radius: 24rpx;
+  background-image: linear-gradient(to right, #75e1b6, #1ea5d6);
+  text-align: center;
+  margin-right: 53rpx;
+}
+/* 评价 e */

@@ -45,6 +45,12 @@
         "userPrivacy/userPrivacy",
         "cardInfo/cardInfo"
       ]
+    },
+    {
+      "root": "subpackages/fourth/",
+      "pages": [
+        "rate/rate"
+      ]
     }
   ],
   "preloadRule": {

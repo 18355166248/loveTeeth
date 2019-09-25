@@ -1,0 +1,8 @@
+<view class="score">
+  <block wx:for="{{gradeActive}}" wx:key="index">
+    <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc2' src='./score_active.png'></image>
+  </block>
+  <block wx:for="{{grade}}" wx:key="index">
+    <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc' src='./score.png'></image>
+  </block>
+</view>

@@ -25,7 +25,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.8.1",
-  "appid": "wxbd5cb7e16e17b39d",
+	"appid": "wxb5ad95a20af4cbc5",
 	"projectname": "loveTeeth",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -51,7 +51,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 6,
 			"list": [
 				{
 					"id": 0,
@@ -92,6 +92,14 @@
 					"id": -1,
 					"name": "详情页",
 					"pathName": "subpackages/third/cardInfo/cardInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "评价",
+					"pathName": "subpackages/fourth/rate/rate",
+					"query": "",
 					"scene": null
 				}
 			]

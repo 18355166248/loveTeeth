@@ -1,0 +1,9 @@
+<view id="rate">
+  <!-- 评价 -->
+  <view class="rate_star">
+    <view wx:for="{{rateList}}" wx:key="{{index}}" class="rate_area">
+      <view class="area_title">{{item.text}}</view>
+      <score gradeActive="{{item.grade}}" index="{{index}}" bind:change='changeGrade'></score>
+    </view>
+  </view>
+</view>

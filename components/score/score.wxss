@@ -1,0 +1,16 @@
+/* components/score/score.wxss */
+.score {
+  height: 47rpx;
+  line-height: 47rpx;
+  display: flex;
+  align-items: center;
+}
+.score > image {
+  height: 36rpx;
+  width: 37rpx;
+  display: inline-block;
+  margin-right: 20rpx;
+}
+.score > image:last-child {
+  margin-right: 0;
+}
