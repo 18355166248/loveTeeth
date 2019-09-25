@@ -65,10 +65,11 @@ Component({
         url
       switch (id) {
         case 1:
-          url = '/pages/home/home'
-          wx.redirectTo({
-            url: url
-          })
+          if (this.data.hasUserInfo) {
+            this.linkClick('/pages/home/home')
+          } else {
+            this.authorPupop.togglePopup(true)
+          }
           break
         case 2:
           // console.log(this.data.hasUserInfo)

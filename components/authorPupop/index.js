@@ -61,6 +61,8 @@ Component({
       //------------------把信息传入后台,后台解密拿手机号
       // 拿到手机号后存入到storage用来判断是否授权过
       // icom.storage('phoneNumber', phoneNumber)
+      //--------------存到后台后,隐藏弹窗
+      // this.togglePopup(false)
     }
   }
 })
